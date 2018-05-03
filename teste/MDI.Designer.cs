@@ -50,6 +50,7 @@ namespace teste
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
+            this.btnCadmarca = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbonHost1
@@ -68,6 +69,7 @@ namespace teste
             this.ribbonPanel1.Items.Add(this.btnCadProduto);
             this.ribbonPanel1.Items.Add(this.btnCadCliente);
             this.ribbonPanel1.Items.Add(this.btnCadCategoria);
+            this.ribbonPanel1.Items.Add(this.btnCadmarca);
             this.ribbonPanel1.Text = "";
             // 
             // btnCadProduto
@@ -182,6 +184,12 @@ namespace teste
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "Cadastro";
             // 
+            // btnCadmarca
+            // 
+            this.btnCadmarca.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
+            this.btnCadmarca.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadmarca.SmallImage")));
+            this.btnCadmarca.Text = "Marca";
+            // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,5 +229,6 @@ namespace teste
         private System.Windows.Forms.RibbonPanel ribbonPanel3;
         private System.Windows.Forms.RibbonButton btnConsCliente;
         public System.Windows.Forms.RibbonButton btnConsProduto;
+        private System.Windows.Forms.RibbonButton btnCadmarca;
     }
 }

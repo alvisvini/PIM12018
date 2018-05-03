@@ -63,6 +63,26 @@ namespace MiniPack.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_clear_formatting_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-clear-formatting-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_mais_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-mais-24", resourceCulture);
@@ -76,6 +96,26 @@ namespace MiniPack.Properties {
         internal static System.Drawing.Bitmap icons8_people_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-people-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-save-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

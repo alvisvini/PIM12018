@@ -18,3 +18,9 @@ C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\MiniPack.exe.manifest
 C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\MiniPack.application
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.exe.manifest
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.application
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Google.Protobuf.dll
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\MySql.Data.dll
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Google.Protobuf.xml
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\MySql.Data.xml
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Devart.Data.dll
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Devart.Data.MySql.dll

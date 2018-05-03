@@ -60,6 +60,16 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.1926.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotConnect.Express.for.MySQL.8.10.1134\lib\Devart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data.MySql, Version=8.10.1134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotConnect.Express.for.MySQL.8.10.1134\lib\Devart.Data.MySql.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
     </Reference>
@@ -70,9 +80,20 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Forms.Ribbon35.3.5.8.0\lib\net35\System.Windows.Forms.Ribbon35.dll</HintPath>
     </Reference>
@@ -87,16 +108,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmConsultaProduto.cs">
+    <Compile Include="Banco.cs" />
+    <Compile Include="Produto\control\ProdutoController.cs" />
+    <Compile Include="Produto\model\Produto.cs" />
+    <Compile Include="Produto\view\frmConsultaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaProduto.Designer.cs">
+    <Compile Include="Produto\view\frmConsultaProduto.Designer.cs">
       <DependentUpon>frmConsultaProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroProduto.cs">
+    <Compile Include="Produto\view\frmCadastroProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroProduto.Designer.cs">
+    <Compile Include="Produto\view\frmCadastroProduto.Designer.cs">
       <DependentUpon>frmCadastroProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="MDI.cs">
@@ -107,10 +131,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmConsultaProduto.resx">
+    <EmbeddedResource Include="Produto\view\frmConsultaProduto.resx">
       <DependentUpon>frmConsultaProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroProduto.resx">
+    <EmbeddedResource Include="Produto\view\frmCadastroProduto.resx">
       <DependentUpon>frmCadastroProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
@@ -145,6 +169,10 @@
     <Content Include="MetroFramework.txt" />
     <None Include="Resources\icons8-mais-24.png" />
     <None Include="Resources\icons8-people-24.png" />
+    <None Include="Resources\icons8-save-24.png" />
+    <None Include="Resources\icons8-cancel-24.png" />
+    <None Include="Resources\icons8-clear-formatting-24.png" />
+    <None Include="Resources\icons8-search-24.png" />
     <Content Include="Updates.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -159,5 +187,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
