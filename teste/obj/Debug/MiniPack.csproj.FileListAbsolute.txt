@@ -14,3 +14,7 @@ C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.csproj.CopyComplete
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.exe
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.pdb
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.csprojResolveAssemblyReference.cache
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\MiniPack.exe.manifest
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\MiniPack.application
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.exe.manifest
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.application

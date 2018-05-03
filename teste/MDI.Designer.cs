@@ -32,14 +32,21 @@ namespace teste
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDI));
             this.ribbonHost1 = new System.Windows.Forms.RibbonHost();
-            this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
+            this.ribTabCadastro = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
+            this.btnCadProduto = new System.Windows.Forms.RibbonButton();
+            this.btnCadCliente = new System.Windows.Forms.RibbonButton();
+            this.btnCadCategoria = new System.Windows.Forms.RibbonButton();
+            this.ribTabConsulta = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
+            this.btnConsCliente = new System.Windows.Forms.RibbonButton();
+            this.btnConsProduto = new System.Windows.Forms.RibbonButton();
+            this.ribTabVenda = new System.Windows.Forms.RibbonTab();
             this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
             this.ribbon1 = new System.Windows.Forms.Ribbon();
+            this.ribTabJanela = new System.Windows.Forms.RibbonTab();
+            this.ribTabSobre = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
@@ -49,40 +56,67 @@ namespace teste
             // 
             this.ribbonHost1.HostedControl = null;
             // 
-            // ribbonTab1
+            // ribTabCadastro
             // 
-            this.ribbonTab1.Panels.Add(this.ribbonPanel1);
-            this.ribbonTab1.Text = "Produto";
+            this.ribTabCadastro.Panels.Add(this.ribbonPanel1);
+            this.ribTabCadastro.Text = "Cadastro";
             // 
             // ribbonPanel1
             // 
             this.ribbonPanel1.ButtonMoreEnabled = false;
             this.ribbonPanel1.ButtonMoreVisible = false;
-            this.ribbonPanel1.Items.Add(this.ribbonButton2);
-            this.ribbonPanel1.Items.Add(this.ribbonButton6);
+            this.ribbonPanel1.Items.Add(this.btnCadProduto);
+            this.ribbonPanel1.Items.Add(this.btnCadCliente);
+            this.ribbonPanel1.Items.Add(this.btnCadCategoria);
             this.ribbonPanel1.Text = "";
             // 
-            // ribbonButton2
+            // btnCadProduto
             // 
-            this.ribbonButton2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.Image")));
-            this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
-            this.ribbonButton2.Text = "Cadastro";
-            this.ribbonButton2.Click += new System.EventHandler(this.ribbonButton2_Click);
+            this.btnCadProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnCadProduto.Image")));
+            this.btnCadProduto.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadProduto.SmallImage")));
+            this.btnCadProduto.Text = "Produto";
+            this.btnCadProduto.Click += new System.EventHandler(this.btnCadProduto_Click);
             // 
-            // ribbonButton6
+            // btnCadCliente
             // 
-            this.ribbonButton6.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.Image")));
-            this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
-            this.ribbonButton6.Text = "Consulta";
-            this.ribbonButton6.Click += new System.EventHandler(this.ribbonButton6_Click);
+            this.btnCadCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCadCliente.Image")));
+            this.btnCadCliente.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadCliente.SmallImage")));
+            this.btnCadCliente.Text = "Cliente";
+            this.btnCadCliente.Click += new System.EventHandler(this.btnCadCliente_Click);
             // 
-            // ribbonTab2
+            // btnCadCategoria
             // 
-            this.ribbonTab2.Text = "Cliente";
+            this.btnCadCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCadCategoria.Image")));
+            this.btnCadCategoria.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadCategoria.SmallImage")));
+            this.btnCadCategoria.Text = "Categoria";
             // 
-            // ribbonTab3
+            // ribTabConsulta
             // 
-            this.ribbonTab3.Text = "Venda";
+            this.ribTabConsulta.Panels.Add(this.ribbonPanel3);
+            this.ribTabConsulta.Text = "Consulta";
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.Items.Add(this.btnConsCliente);
+            this.ribbonPanel3.Items.Add(this.btnConsProduto);
+            this.ribbonPanel3.Text = "";
+            // 
+            // btnConsCliente
+            // 
+            this.btnConsCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnConsCliente.Image")));
+            this.btnConsCliente.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnConsCliente.SmallImage")));
+            this.btnConsCliente.Text = "Cliente";
+            // 
+            // btnConsProduto
+            // 
+            this.btnConsProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnConsProduto.Image")));
+            this.btnConsProduto.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnConsProduto.SmallImage")));
+            this.btnConsProduto.Text = "Produto";
+            this.btnConsProduto.Click += new System.EventHandler(this.btnConsProduto_Click);
+            // 
+            // ribTabVenda
+            // 
+            this.ribTabVenda.Text = "Venda";
             // 
             // ribbonButton1
             // 
@@ -110,12 +144,27 @@ namespace teste
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
             this.ribbon1.Size = new System.Drawing.Size(720, 95);
             this.ribbon1.TabIndex = 1;
-            this.ribbon1.Tabs.Add(this.ribbonTab1);
-            this.ribbon1.Tabs.Add(this.ribbonTab2);
-            this.ribbon1.Tabs.Add(this.ribbonTab3);
+            this.ribbon1.Tabs.Add(this.ribTabCadastro);
+            this.ribbon1.Tabs.Add(this.ribTabConsulta);
+            this.ribbon1.Tabs.Add(this.ribTabVenda);
+            this.ribbon1.Tabs.Add(this.ribTabJanela);
+            this.ribbon1.Tabs.Add(this.ribTabSobre);
             this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 2, 20, 0);
             this.ribbon1.Text = "ribbon1";
             this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Blue;
+            // 
+            // ribTabJanela
+            // 
+            this.ribTabJanela.Text = "Janela";
+            // 
+            // ribTabSobre
+            // 
+            this.ribTabSobre.Panels.Add(this.ribbonPanel2);
+            this.ribTabSobre.Text = "Sobre";
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.Text = "ribbonPanel2";
             // 
             // ribbonButton3
             // 
@@ -154,16 +203,23 @@ namespace teste
         #endregion
 
         private System.Windows.Forms.RibbonHost ribbonHost1;
-        private System.Windows.Forms.RibbonTab ribbonTab1;
+        private System.Windows.Forms.RibbonTab ribTabCadastro;
         private System.Windows.Forms.RibbonPanel ribbonPanel1;
-        private System.Windows.Forms.RibbonTab ribbonTab2;
-        private System.Windows.Forms.RibbonTab ribbonTab3;
+        private System.Windows.Forms.RibbonTab ribTabConsulta;
+        private System.Windows.Forms.RibbonTab ribTabVenda;
         private System.Windows.Forms.RibbonButton ribbonButton1;
-        private System.Windows.Forms.RibbonButton ribbonButton2;
+        private System.Windows.Forms.RibbonButton btnCadProduto;
         private System.Windows.Forms.Ribbon ribbon1;
         private System.Windows.Forms.RibbonButton ribbonButton3;
         private System.Windows.Forms.RibbonButton ribbonButton4;
-        private System.Windows.Forms.RibbonButton ribbonButton6;
+        private System.Windows.Forms.RibbonButton btnCadCliente;
         private System.Windows.Forms.RibbonButton ribbonButton5;
+        private System.Windows.Forms.RibbonButton btnCadCategoria;
+        private System.Windows.Forms.RibbonTab ribTabJanela;
+        private System.Windows.Forms.RibbonTab ribTabSobre;
+        private System.Windows.Forms.RibbonPanel ribbonPanel2;
+        private System.Windows.Forms.RibbonPanel ribbonPanel3;
+        private System.Windows.Forms.RibbonButton btnConsCliente;
+        public System.Windows.Forms.RibbonButton btnConsProduto;
     }
 }
