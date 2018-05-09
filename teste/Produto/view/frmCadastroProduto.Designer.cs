@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroProduto));
             this.ab3 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.categoria = new MetroFramework.Controls.MetroComboBox();
             this.Pesquisar = new System.Windows.Forms.Button();
             this.Limpar = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tbDescricao = new MetroFramework.Controls.MetroTextBox();
             this.ribbonUpDown1 = new System.Windows.Forms.RibbonUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.ab3.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbPreco)).BeginInit();
@@ -70,7 +70,7 @@
             this.ab3.Location = new System.Drawing.Point(11, 63);
             this.ab3.Name = "ab3";
             this.ab3.SelectedIndex = 0;
-            this.ab3.Size = new System.Drawing.Size(802, 419);
+            this.ab3.Size = new System.Drawing.Size(805, 416);
             this.ab3.TabIndex = 0;
             // 
             // metroTabPage1
@@ -102,10 +102,19 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(794, 380);
+            this.metroTabPage1.Size = new System.Drawing.Size(797, 377);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Dados Gerais";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(369, 252);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "R$";
             // 
             // categoria
             // 
@@ -361,21 +370,12 @@
             this.ribbonUpDown1.TextBoxText = "";
             this.ribbonUpDown1.TextBoxWidth = 50;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(369, 252);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "R$";
-            // 
             // frmCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(836, 540);
+            this.ClientSize = new System.Drawing.Size(839, 537);
             this.Controls.Add(this.ab3);
             this.MinimumSize = new System.Drawing.Size(473, 408);
             this.Name = "frmCadastroProduto";

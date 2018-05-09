@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SEQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRICAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Pesquisar = new System.Windows.Forms.Button();
+            this.SEQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRICAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SEQCATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,8 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SEQ,
             this.DESCRICAO,
-            this.MARCA});
+            this.MARCA,
+            this.SEQCATEGORIA});
             this.dataGridView1.Location = new System.Drawing.Point(23, 118);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -57,30 +59,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(756, 331);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // SEQ
-            // 
-            this.SEQ.DataPropertyName = "SEQ";
-            this.SEQ.HeaderText = "Seq";
-            this.SEQ.Name = "SEQ";
-            this.SEQ.ReadOnly = true;
-            // 
-            // DESCRICAO
-            // 
-            this.DESCRICAO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DESCRICAO.DataPropertyName = "DESCRICAO";
-            this.DESCRICAO.HeaderText = "Descricao";
-            this.DESCRICAO.Name = "DESCRICAO";
-            this.DESCRICAO.ReadOnly = true;
-            // 
-            // MARCA
-            // 
-            this.MARCA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MARCA.DataPropertyName = "MARCA";
-            this.MARCA.HeaderText = "Marca";
-            this.MARCA.Name = "MARCA";
-            this.MARCA.ReadOnly = true;
-            this.MARCA.Width = 62;
             // 
             // textBox1
             // 
@@ -116,6 +94,37 @@
             this.Pesquisar.UseVisualStyleBackColor = false;
             this.Pesquisar.Click += new System.EventHandler(this.Pesquisar_Click);
             // 
+            // SEQ
+            // 
+            this.SEQ.DataPropertyName = "SEQ";
+            this.SEQ.HeaderText = "Seq";
+            this.SEQ.Name = "SEQ";
+            this.SEQ.ReadOnly = true;
+            // 
+            // DESCRICAO
+            // 
+            this.DESCRICAO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DESCRICAO.DataPropertyName = "DESCRICAO";
+            this.DESCRICAO.HeaderText = "Descricao";
+            this.DESCRICAO.Name = "DESCRICAO";
+            this.DESCRICAO.ReadOnly = true;
+            // 
+            // MARCA
+            // 
+            this.MARCA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MARCA.DataPropertyName = "MARCA";
+            this.MARCA.HeaderText = "Marca";
+            this.MARCA.Name = "MARCA";
+            this.MARCA.ReadOnly = true;
+            this.MARCA.Width = 62;
+            // 
+            // SEQCATEGORIA
+            // 
+            this.SEQCATEGORIA.HeaderText = "Categoria";
+            this.SEQCATEGORIA.Name = "SEQCATEGORIA";
+            this.SEQCATEGORIA.ReadOnly = true;
+            this.SEQCATEGORIA.Visible = false;
+            // 
             // frmConsultaProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +153,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SEQ;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRICAO;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SEQCATEGORIA;
     }
 }
 

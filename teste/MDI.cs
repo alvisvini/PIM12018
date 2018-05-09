@@ -24,14 +24,11 @@ namespace teste
             f2.Show();
         }
 
-        private void ribbon1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCadCliente_Click(object sender, EventArgs e)
         {
-
+            frmCadastroCliente f2 = new frmCadastroCliente();
+            f2.MdiParent = this;
+            f2.Show();
         }
     }
 }
