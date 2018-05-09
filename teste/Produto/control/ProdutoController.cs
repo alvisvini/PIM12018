@@ -11,11 +11,13 @@ namespace MiniPack.Produto.control
             try
             {
                 Banco.Open();
-                string cmdText = "INSERT INTO GE_PRODUTO(descricao,marca,obs) VALUES (?desc,?marca, ?obs);";
+                string cmdText = "INSERT INTO GE_PRODUTO(descricao,marca,obs,seqcategoria,preco) VALUES (?desc,?marca, ?obs, ?seqcateg, ?preco);";
                 MySqlCommand cmd = new MySqlCommand(cmdText, Banco.connection);
                 cmd.Parameters.AddWithValue("?desc", p.Desc);
                 cmd.Parameters.AddWithValue("?marca", p.Marca);
                 cmd.Parameters.AddWithValue("?obs", p.Obs);
+                cmd.Parameters.AddWithValue("?seqcateg", p.Seqcategoria);
+                cmd.Parameters.AddWithValue("?preco", p.Preco);
                 cmd.ExecuteNonQuery();
                 Banco.Close();
                 return true;
@@ -23,6 +25,32 @@ namespace MiniPack.Produto.control
             catch (MySqlException e)
             {
                 MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                return false;
+            }
+        }
+
+        public bool Update(model.Produto p)
+        {
+            try
+            {
+                Banco.Open();
+                string cmdText = "update GE_PRODUTO set descricao = ?desc, marca = ?marca, obs = ?obs, seqcategoria = ?categ where seq = ?seq, preco = ?preco;";
+                MySqlCommand cmd = new MySqlCommand(cmdText, Banco.connection);
+                cmd.Parameters.AddWithValue("?desc", p.Desc);
+                cmd.Parameters.AddWithValue("?marca", p.Marca);
+                cmd.Parameters.AddWithValue("?obs", p.Obs);
+                cmd.Parameters.AddWithValue("?categ", p.Seqcategoria);
+                cmd.Parameters.AddWithValue("?seq", p.Seq);
+                cmd.Parameters.AddWithValue("?preco", p.Preco);
+                cmd.ExecuteNonQuery();
+                Banco.Close();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 return false;
             }
         }
@@ -47,7 +75,7 @@ namespace MiniPack.Produto.control
 
         public model.Produto Pesquisar(int seq)
         {
-            string strSQL = "Select * From ge_produto where seq = " + seq;
+            string strSQL = "Select seq,descricao,marca,obs,seqcategoria From ge_produto where seq = " + seq;
             model.Produto p = null;
             try
             {
@@ -60,9 +88,12 @@ namespace MiniPack.Produto.control
                     p = new model.Produto();
                     while (Reader.Read())
                     {
+                        p.Seq = Reader.GetInt16("seq");
                         p.Desc = Reader.GetString("descricao");
                         p.Marca = Reader.GetString("marca");
-                       p.Obs = Reader.GetString("obs");
+                        p.Obs = Reader.GetString("obs");
+                        p.Preco = Reader.GetUInt16("preco");
+                        p.Seqcategoria = Reader.GetInt16("seqcategoria");
                     }
                 }
                 Reader.Close();
@@ -83,7 +114,7 @@ namespace MiniPack.Produto.control
             DataTable dt = new DataTable();
             try
             {
-                string strSQL = "Select seq,descricao,marca from ge_produto";
+                string strSQL = "Select seq,descricao,marca,seqcategoria from ge_produto";
                 if (where != "")
                     strSQL += " where descricao like'%" + where + "%'";
                 Banco.Open();
@@ -105,7 +136,7 @@ namespace MiniPack.Produto.control
             DataTable dt = new DataTable();
             try
             {
-                string strSQL = "Select descricao from ge_categoria";
+                string strSQL = "Select seq,descricao from ge_categoria";
 
                 Banco.Open();
                 MySqlCommand comando = new MySqlCommand(strSQL, Banco.connection);

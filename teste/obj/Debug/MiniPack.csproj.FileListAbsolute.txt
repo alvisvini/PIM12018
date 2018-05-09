@@ -1,5 +1,3 @@
-C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmConsultaProduto.resources
-C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmCadastroProduto.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.MDI.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Properties.Resources.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.csproj.GenerateResource.cache
@@ -24,3 +22,6 @@ C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Google.Protobuf.xml
 C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\MySql.Data.xml
 C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Devart.Data.dll
 C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Devart.Data.MySql.dll
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmCadastroCliente.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmConsultaProduto.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmCadastroProduto.resources
