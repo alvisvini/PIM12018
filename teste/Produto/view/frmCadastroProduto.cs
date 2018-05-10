@@ -1,13 +1,16 @@
 ﻿using MiniPack.Produto.control;
 using MiniPack.Produto.model;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace teste
 {
     public partial class frmCadastroProduto : MetroFramework.Forms.MetroForm
     {
-        bool carregado = false;
+        private bool carregado = false;
+        private string urlImagem = Directory.GetCurrentDirectory() + "\\unavailable.png";
 
         public frmCadastroProduto()
         {
@@ -20,37 +23,55 @@ namespace teste
             file.Filter = "jpg|*.jpg";
             if (file.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.ImageLocation = file.FileName;
+                pbImagem.ImageLocation = file.FileName;
+                urlImagem = file.FileName;
             }
 
         }
 
         private void Salvar_Click(object sender, EventArgs e)
         {
-            Produto p = new Produto();
-            p.Seq = Convert.ToUInt16(tbSeq.Text);
-            p.Desc = tbDescricao.Text.ToUpper();
-            p.Marca = tbMarca.Text.ToUpper();
-            p.Obs = tbObs.Text.ToUpper();
-            p.Seqcategoria = Convert.ToInt16(categoria.SelectedValue);
-            p.Preco = Convert.ToInt16(tbPreco.Text);
-            ProdutoController control = new ProdutoController();
+            if (!string.IsNullOrEmpty(tbDescricao.Text) && (!string.IsNullOrEmpty(tbMarca.Text)) && categoria.SelectedIndex >= 0)
+            {
+                Produto p = new Produto();
+                if (!string.IsNullOrEmpty(tbSeq.Text))
+                    p.Seq = Convert.ToUInt16(tbSeq.Text);
+                p.Desc = tbDescricao.Text.ToUpper();
+                p.Marca = tbMarca.Text.ToUpper();
+                p.Obs = tbObs.Text.ToUpper();
+                p.Seqcategoria = Convert.ToInt16(categoria.SelectedValue);
+                p.Preco = tbPreco.Value;
+                p.Tamanho = Convert.ToInt32(tbTamanho.Value);
+                p.Imagem = urlImagem;
 
-            if (carregado == false)
-            {
-                if (control.Insert(p))
+                ProdutoController control = new ProdutoController();
+
+                if (carregado == false)
                 {
-                    MessageBox.Show("Produto inserido com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (control.Insert(p))
+                    {
+                        MessageBox.Show("Produto inserido com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-            }else
-            {
-                if (control.Update(p))
+                else
                 {
-                    MessageBox.Show("Produto atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (control.Update(p))
+                    {
+                        MessageBox.Show("Produto atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+
+                limpaTela();
+            }
+            else
+            {
+                MessageBox.Show("Dados incompletos. Verifique os campos:\n\n - Descricao\n - Marca\n - Categoria", "ATENCAO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.ActiveControl = tbDescricao;
+                tbDescricao.Focus();
             }
         }
 
+        
         private void Excluir_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(tbSeq.Text))
@@ -76,6 +97,7 @@ namespace teste
             categoria.DataSource = control.GetCategorias();
             categoria.SelectedIndex = -1;
             carregado = false;
+            pbImagem.Image = MiniPack.Properties.Resources.unavailable;
         }
 
         private void Limpar_Click(object sender, EventArgs e)
@@ -90,6 +112,11 @@ namespace teste
             tbMarca.Text = "";
             tbObs.Text = "";
             categoria.SelectedIndex = -1;
+            tbPreco.Value = 0;
+            tbTamanho.Value = 0;
+            pbImagem.Image = MiniPack.Properties.Resources.unavailable;
+            urlImagem = Directory.GetCurrentDirectory() + "\\unavailable.png";
+
             carregado = false;
         }
 
@@ -114,6 +141,10 @@ namespace teste
             tbMarca.Text = p.Marca;
             tbObs.Text = p.Obs;
             categoria.SelectedValue = p.Seqcategoria;
+            tbPreco.Value = p.Preco;
+            tbTamanho.Value = p.Tamanho;
+            pbImagem.Image = MiniPack.Properties.Resources.unavailable;
+            pbImagem.ImageLocation = p.Imagem;
             carregado = true;
         }
     }

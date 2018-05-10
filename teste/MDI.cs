@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniPack.Categoria.View;
+using System;
 using System.Windows.Forms;
 
 namespace teste
@@ -27,6 +28,13 @@ namespace teste
         private void btnCadCliente_Click(object sender, EventArgs e)
         {
             frmCadastroCliente f2 = new frmCadastroCliente();
+            f2.MdiParent = this;
+            f2.Show();
+        }
+
+        private void btnCAdCategoria(object sender, EventArgs e)
+        {
+            Cadcategoria f2 = new Cadcategoria();
             f2.MdiParent = this;
             f2.Show();
         }

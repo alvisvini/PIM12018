@@ -11,13 +11,15 @@ namespace MiniPack.Produto.control
             try
             {
                 Banco.Open();
-                string cmdText = "INSERT INTO GE_PRODUTO(descricao,marca,obs,seqcategoria,preco) VALUES (?desc,?marca, ?obs, ?seqcateg, ?preco);";
+                string cmdText = "INSERT INTO GE_PRODUTO(descricao,marca,obs,seqcategoria,preco,tamanho,imagem) VALUES (?desc,?marca, ?obs, ?seqcateg, ?preco, ?tamanho, ?imagem);";
                 MySqlCommand cmd = new MySqlCommand(cmdText, Banco.connection);
                 cmd.Parameters.AddWithValue("?desc", p.Desc);
                 cmd.Parameters.AddWithValue("?marca", p.Marca);
                 cmd.Parameters.AddWithValue("?obs", p.Obs);
                 cmd.Parameters.AddWithValue("?seqcateg", p.Seqcategoria);
                 cmd.Parameters.AddWithValue("?preco", p.Preco);
+                cmd.Parameters.AddWithValue("?tamanho", p.Tamanho);
+                cmd.Parameters.AddWithValue("?imagem", p.Imagem);
                 cmd.ExecuteNonQuery();
                 Banco.Close();
                 return true;
@@ -35,7 +37,7 @@ namespace MiniPack.Produto.control
             try
             {
                 Banco.Open();
-                string cmdText = "update GE_PRODUTO set descricao = ?desc, marca = ?marca, obs = ?obs, seqcategoria = ?categ where seq = ?seq, preco = ?preco;";
+                string cmdText = "update GE_PRODUTO set descricao = ?desc, marca = ?marca, obs = ?obs, seqcategoria = ?categ, preco = ?preco, tamanho = ?tam, imagem = ?img where seq = ?seq;";
                 MySqlCommand cmd = new MySqlCommand(cmdText, Banco.connection);
                 cmd.Parameters.AddWithValue("?desc", p.Desc);
                 cmd.Parameters.AddWithValue("?marca", p.Marca);
@@ -43,6 +45,8 @@ namespace MiniPack.Produto.control
                 cmd.Parameters.AddWithValue("?categ", p.Seqcategoria);
                 cmd.Parameters.AddWithValue("?seq", p.Seq);
                 cmd.Parameters.AddWithValue("?preco", p.Preco);
+                cmd.Parameters.AddWithValue("?tam", p.Tamanho);
+                cmd.Parameters.AddWithValue("?img", p.Imagem);
                 cmd.ExecuteNonQuery();
                 Banco.Close();
                 return true;
@@ -75,7 +79,7 @@ namespace MiniPack.Produto.control
 
         public model.Produto Pesquisar(int seq)
         {
-            string strSQL = "Select seq,descricao,marca,obs,seqcategoria From ge_produto where seq = " + seq;
+            string strSQL = "Select seq,descricao,marca,obs,seqcategoria,preco,tamanho,imagem From ge_produto where seq = " + seq;
             model.Produto p = null;
             try
             {
@@ -92,8 +96,10 @@ namespace MiniPack.Produto.control
                         p.Desc = Reader.GetString("descricao");
                         p.Marca = Reader.GetString("marca");
                         p.Obs = Reader.GetString("obs");
-                        p.Preco = Reader.GetUInt16("preco");
+                        p.Preco = Reader.GetDecimal("preco");
                         p.Seqcategoria = Reader.GetInt16("seqcategoria");
+                        p.Tamanho = Reader.GetInt16("tamanho");
+                        p.Imagem = Reader.GetString("imagem");
                     }
                 }
                 Reader.Close();

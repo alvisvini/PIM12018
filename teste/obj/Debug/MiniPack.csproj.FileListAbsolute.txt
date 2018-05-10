@@ -25,3 +25,4 @@ C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Devart.Data.MySql.dll
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmCadastroCliente.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmConsultaProduto.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmCadastroProduto.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Categoria.View.Cadcategoria.resources

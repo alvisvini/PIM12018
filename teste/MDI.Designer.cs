@@ -37,6 +37,7 @@ namespace teste
             this.btnCadProduto = new System.Windows.Forms.RibbonButton();
             this.btnCadCliente = new System.Windows.Forms.RibbonButton();
             this.btnCadCategoria = new System.Windows.Forms.RibbonButton();
+            this.btnCadmarca = new System.Windows.Forms.RibbonButton();
             this.ribTabConsulta = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.btnConsCliente = new System.Windows.Forms.RibbonButton();
@@ -50,7 +51,6 @@ namespace teste
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.btnCadmarca = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbonHost1
@@ -91,6 +91,13 @@ namespace teste
             this.btnCadCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCadCategoria.Image")));
             this.btnCadCategoria.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadCategoria.SmallImage")));
             this.btnCadCategoria.Text = "Categoria";
+            this.btnCadCategoria.Click += new System.EventHandler(this.btnCAdCategoria);
+            // 
+            // btnCadmarca
+            // 
+            this.btnCadmarca.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
+            this.btnCadmarca.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadmarca.SmallImage")));
+            this.btnCadmarca.Text = "Marca";
             // 
             // ribTabConsulta
             // 
@@ -183,12 +190,6 @@ namespace teste
             this.ribbonButton5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.Image")));
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "Cadastro";
-            // 
-            // btnCadmarca
-            // 
-            this.btnCadmarca.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
-            this.btnCadmarca.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadmarca.SmallImage")));
-            this.btnCadmarca.Text = "Marca";
             // 
             // MDI
             // 

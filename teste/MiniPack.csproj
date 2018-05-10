@@ -109,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.cs" />
+    <Compile Include="Categoria\View\Cadcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria\View\Cadcategoria.Designer.cs">
+      <DependentUpon>Cadcategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes\Controller\ClienteController.cs" />
     <Compile Include="Clientes\Model\Cliente.cs" />
     <Compile Include="Clientes\View\frmCadastroCliente.cs">
@@ -139,6 +145,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Categoria\View\Cadcategoria.resx">
+      <DependentUpon>Cadcategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\View\frmCadastroCliente.resx">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,7 @@
     <None Include="Resources\icons8-cancel-24.png" />
     <None Include="Resources\icons8-clear-formatting-24.png" />
     <None Include="Resources\icons8-search-24.png" />
+    <None Include="Resources\unavailable.jpg" />
     <Content Include="Updates.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +208,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Categoria\Controller\" />
+    <Folder Include="Categoria\Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
