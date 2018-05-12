@@ -109,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.cs" />
+    <Compile Include="Categoria\Controller\categoriacontroller.cs" />
+    <Compile Include="Categoria\Model\categoria.cs" />
+    <Compile Include="Categoria\Model\categoria1.cs" />
     <Compile Include="Categoria\View\Cadcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +126,7 @@
     <Compile Include="Clientes\View\frmCadastroCliente.Designer.cs">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\categoria.cs" />
     <Compile Include="Produto\control\ProdutoController.cs" />
     <Compile Include="Produto\model\Produto.cs" />
     <Compile Include="Produto\view\frmConsultaProduto.cs">
@@ -208,9 +212,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Categoria\Controller\" />
-    <Folder Include="Categoria\Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

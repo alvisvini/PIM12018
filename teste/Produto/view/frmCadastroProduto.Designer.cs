@@ -30,6 +30,8 @@
         {
             this.ab3 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbEsqtoque = new System.Windows.Forms.NumericUpDown();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.categoria = new System.Windows.Forms.ComboBox();
@@ -54,14 +56,12 @@
             this.Excluir = new System.Windows.Forms.Button();
             this.Salvar = new System.Windows.Forms.Button();
             this.ribbonUpDown1 = new System.Windows.Forms.RibbonUpDown();
-            this.tbEsqtoque = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.ab3.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEsqtoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPreco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTamanho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbEsqtoque)).BeginInit();
             this.SuspendLayout();
             // 
             // ab3
@@ -108,6 +108,29 @@
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Dados Gerais";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(82, 286);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "QTDE";
+            // 
+            // tbEsqtoque
+            // 
+            this.tbEsqtoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEsqtoque.Location = new System.Drawing.Point(123, 282);
+            this.tbEsqtoque.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.tbEsqtoque.Name = "tbEsqtoque";
+            this.tbEsqtoque.Size = new System.Drawing.Size(81, 22);
+            this.tbEsqtoque.TabIndex = 27;
+            this.tbEsqtoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // metroLabel9
             // 
@@ -325,7 +348,7 @@
             this.Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pesquisar.Image = global::MiniPack.Properties.Resources.icons8_search_24;
             this.Pesquisar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Pesquisar.Location = new System.Drawing.Point(448, 468);
+            this.Pesquisar.Location = new System.Drawing.Point(444, 426);
             this.Pesquisar.Name = "Pesquisar";
             this.Pesquisar.Size = new System.Drawing.Size(81, 46);
             this.Pesquisar.TabIndex = 23;
@@ -343,7 +366,7 @@
             this.Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Limpar.Image = global::MiniPack.Properties.Resources.icons8_clear_formatting_24;
             this.Limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Limpar.Location = new System.Drawing.Point(187, 468);
+            this.Limpar.Location = new System.Drawing.Point(183, 426);
             this.Limpar.Name = "Limpar";
             this.Limpar.Size = new System.Drawing.Size(81, 46);
             this.Limpar.TabIndex = 22;
@@ -361,7 +384,7 @@
             this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Excluir.Image = global::MiniPack.Properties.Resources.icons8_cancel_24;
             this.Excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Excluir.Location = new System.Drawing.Point(361, 468);
+            this.Excluir.Location = new System.Drawing.Point(357, 426);
             this.Excluir.Name = "Excluir";
             this.Excluir.Size = new System.Drawing.Size(81, 46);
             this.Excluir.TabIndex = 21;
@@ -379,7 +402,7 @@
             this.Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Salvar.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
             this.Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Salvar.Location = new System.Drawing.Point(274, 468);
+            this.Salvar.Location = new System.Drawing.Point(270, 426);
             this.Salvar.Name = "Salvar";
             this.Salvar.Size = new System.Drawing.Size(81, 46);
             this.Salvar.TabIndex = 14;
@@ -394,29 +417,6 @@
             this.ribbonUpDown1.TextBoxText = "";
             this.ribbonUpDown1.TextBoxWidth = 50;
             // 
-            // tbEsqtoque
-            // 
-            this.tbEsqtoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEsqtoque.Location = new System.Drawing.Point(123, 282);
-            this.tbEsqtoque.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.tbEsqtoque.Name = "tbEsqtoque";
-            this.tbEsqtoque.Size = new System.Drawing.Size(81, 22);
-            this.tbEsqtoque.TabIndex = 27;
-            this.tbEsqtoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 286);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "QTDE";
-            // 
             // frmCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,9 +425,9 @@
             this.ClientSize = new System.Drawing.Size(839, 537);
             this.Controls.Add(this.ab3);
             this.Controls.Add(this.Salvar);
+            this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.Excluir);
             this.Controls.Add(this.Limpar);
-            this.Controls.Add(this.Pesquisar);
             this.MinimumSize = new System.Drawing.Size(473, 408);
             this.Name = "frmCadastroProduto";
             this.Resizable = false;
@@ -436,10 +436,10 @@
             this.ab3.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEsqtoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbPreco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTamanho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbEsqtoque)).EndInit();
             this.ResumeLayout(false);
 
         }

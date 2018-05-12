@@ -103,7 +103,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 46);
             this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
+            this.button1.Text = "Salvar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = false;
