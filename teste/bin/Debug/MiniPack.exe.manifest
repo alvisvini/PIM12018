@@ -107,14 +107,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiniPack.exe" size="198640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiniPack.exe" size="203248">
       <assemblyIdentity name="MiniPack" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rziV6+A/I21hV1dEiQQD6dAdSPYOlVi/WS47x7gWDyo=</dsig:DigestValue>
+        <dsig:DigestValue>KdGjG3JqJGH0PAmbMerHrCk19EfpQ50mgVyJ3IYjGVQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

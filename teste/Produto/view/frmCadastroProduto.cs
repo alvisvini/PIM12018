@@ -43,6 +43,7 @@ namespace teste
                 p.Preco = tbPreco.Value;
                 p.Tamanho = Convert.ToInt32(tbTamanho.Value);
                 p.Imagem = urlImagem;
+                p.Quantidade = Convert.ToInt16(tbEsqtoque.Value);
 
                 ProdutoController control = new ProdutoController();
 
@@ -116,6 +117,7 @@ namespace teste
             tbTamanho.Value = 0;
             pbImagem.Image = MiniPack.Properties.Resources.unavailable;
             urlImagem = Directory.GetCurrentDirectory() + "\\unavailable.png";
+            tbEsqtoque.Value = 0;
 
             carregado = false;
         }
@@ -145,6 +147,7 @@ namespace teste
             tbTamanho.Value = p.Tamanho;
             pbImagem.Image = MiniPack.Properties.Resources.unavailable;
             pbImagem.ImageLocation = p.Imagem;
+            tbEsqtoque.Value = p.Quantidade;
             carregado = true;
         }
     }

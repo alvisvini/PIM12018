@@ -83,5 +83,30 @@ namespace teste
             tbDescricao.Text = p.NomeRazao;
            
         }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Endereco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

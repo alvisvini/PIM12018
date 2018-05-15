@@ -73,13 +73,17 @@
             this.ab3.Location = new System.Drawing.Point(11, 63);
             this.ab3.Name = "ab3";
             this.ab3.SelectedIndex = 0;
-            this.ab3.Size = new System.Drawing.Size(805, 366);
+            this.ab3.Size = new System.Drawing.Size(775, 485);
             this.ab3.TabIndex = 0;
             // 
             // metroTabPage1
             // 
             this.metroTabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage1.Controls.Add(this.Salvar);
+            this.metroTabPage1.Controls.Add(this.Pesquisar);
+            this.metroTabPage1.Controls.Add(this.Excluir);
             this.metroTabPage1.Controls.Add(this.label2);
+            this.metroTabPage1.Controls.Add(this.Limpar);
             this.metroTabPage1.Controls.Add(this.tbEsqtoque);
             this.metroTabPage1.Controls.Add(this.metroLabel9);
             this.metroTabPage1.Controls.Add(this.label1);
@@ -104,7 +108,7 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(797, 327);
+            this.metroTabPage1.Size = new System.Drawing.Size(767, 446);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Dados Gerais";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -348,7 +352,7 @@
             this.Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pesquisar.Image = global::MiniPack.Properties.Resources.icons8_search_24;
             this.Pesquisar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Pesquisar.Location = new System.Drawing.Point(444, 426);
+            this.Pesquisar.Location = new System.Drawing.Point(485, 385);
             this.Pesquisar.Name = "Pesquisar";
             this.Pesquisar.Size = new System.Drawing.Size(81, 46);
             this.Pesquisar.TabIndex = 23;
@@ -366,7 +370,7 @@
             this.Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Limpar.Image = global::MiniPack.Properties.Resources.icons8_clear_formatting_24;
             this.Limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Limpar.Location = new System.Drawing.Point(183, 426);
+            this.Limpar.Location = new System.Drawing.Point(201, 385);
             this.Limpar.Name = "Limpar";
             this.Limpar.Size = new System.Drawing.Size(81, 46);
             this.Limpar.TabIndex = 22;
@@ -384,7 +388,7 @@
             this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Excluir.Image = global::MiniPack.Properties.Resources.icons8_cancel_24;
             this.Excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Excluir.Location = new System.Drawing.Point(357, 426);
+            this.Excluir.Location = new System.Drawing.Point(386, 385);
             this.Excluir.Name = "Excluir";
             this.Excluir.Size = new System.Drawing.Size(81, 46);
             this.Excluir.TabIndex = 21;
@@ -402,7 +406,7 @@
             this.Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Salvar.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
             this.Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Salvar.Location = new System.Drawing.Point(270, 426);
+            this.Salvar.Location = new System.Drawing.Point(288, 385);
             this.Salvar.Name = "Salvar";
             this.Salvar.Size = new System.Drawing.Size(81, 46);
             this.Salvar.TabIndex = 14;
@@ -422,12 +426,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(839, 537);
+            this.ClientSize = new System.Drawing.Size(809, 583);
             this.Controls.Add(this.ab3);
-            this.Controls.Add(this.Salvar);
-            this.Controls.Add(this.Pesquisar);
-            this.Controls.Add(this.Excluir);
-            this.Controls.Add(this.Limpar);
             this.MinimumSize = new System.Drawing.Size(473, 408);
             this.Name = "frmCadastroProduto";
             this.Resizable = false;

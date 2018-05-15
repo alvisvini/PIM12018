@@ -111,7 +111,6 @@
     <Compile Include="Banco.cs" />
     <Compile Include="Categoria\Controller\categoriacontroller.cs" />
     <Compile Include="Categoria\Model\categoria.cs" />
-    <Compile Include="Categoria\Model\categoria1.cs" />
     <Compile Include="Categoria\View\Cadcategoria.cs">
       <SubType>Form</SubType>
     </Compile>

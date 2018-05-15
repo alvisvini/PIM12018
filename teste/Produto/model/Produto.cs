@@ -10,6 +10,7 @@
         private decimal preco;
         private int tamanho;
         private string imagem;
+        private int quantidade;
 
         public Produto() { }
 
@@ -21,6 +22,7 @@
         public decimal Preco { get => preco; set => preco = value; }
         public int Tamanho { get => tamanho; set => tamanho = value; }
         public string Imagem { get => imagem; set => imagem = value; }
+        public int Quantidade { get => quantidade; set => quantidade = value; }
     }
 }
 
