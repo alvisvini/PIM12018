@@ -40,33 +40,41 @@ namespace teste
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroCliente));
             this.ab3 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.Pesquisar = new System.Windows.Forms.Button();
-            this.Limpar = new System.Windows.Forms.Button();
-            this.Excluir = new System.Windows.Forms.Button();
+            this.tbnasc = new System.Windows.Forms.MaskedTextBox();
+            this.tbrecado = new System.Windows.Forms.MaskedTextBox();
+            this.TBtelfixo = new System.Windows.Forms.MaskedTextBox();
+            this.tbcel = new System.Windows.Forms.MaskedTextBox();
+            this.tbcpf = new System.Windows.Forms.MaskedTextBox();
+            this.cbTipoPessoa = new System.Windows.Forms.ComboBox();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.cmbEstCivil = new System.Windows.Forms.ComboBox();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.tbEmail = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.tbRg = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.tbSeq = new MetroFramework.Controls.MetroTextBox();
-            this.Salvar = new System.Windows.Forms.Button();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbNomeRazao = new MetroFramework.Controls.MetroLabel();
             this.tbDescricao = new MetroFramework.Controls.MetroTextBox();
-            this.ribbonUpDown1 = new System.Windows.Forms.RibbonUpDown();
-            this.tbCpf = new MetroFramework.Controls.MetroTextBox();
-            this.tbRg = new MetroFramework.Controls.MetroTextBox();
-            this.tbTelCelular = new MetroFramework.Controls.MetroTextBox();
-            this.tbTelFixo = new MetroFramework.Controls.MetroTextBox();
-            this.tbDtaNasc = new MetroFramework.Controls.MetroTextBox();
-            this.tbTelRecado = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.tbEmail = new MetroFramework.Controls.MetroTextBox();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tbSenha = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.tbID = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.tbNro = new System.Windows.Forms.MaskedTextBox();
+            this.tbCep = new System.Windows.Forms.MaskedTextBox();
             this.tbPais = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
@@ -76,24 +84,21 @@ namespace teste
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.tbUf = new MetroFramework.Controls.MetroTextBox();
             this.tbCidade = new MetroFramework.Controls.MetroTextBox();
-            this.tbNumero = new MetroFramework.Controls.MetroTextBox();
             this.tbComplemento = new MetroFramework.Controls.MetroTextBox();
             this.tbBairro = new MetroFramework.Controls.MetroTextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
-            this.tbCep = new MetroFramework.Controls.MetroTextBox();
-            this.button8 = new System.Windows.Forms.Button();
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
             this.tbLogradouro = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.cmbSexo = new System.Windows.Forms.ComboBox();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.cmbEstCivil = new System.Windows.Forms.ComboBox();
+            this.Pesquisar = new System.Windows.Forms.Button();
+            this.Limpar = new System.Windows.Forms.Button();
+            this.Excluir = new System.Windows.Forms.Button();
+            this.Salvar = new System.Windows.Forms.Button();
+            this.ribbonUpDown1 = new System.Windows.Forms.RibbonUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.ab3.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.metroTabPage3.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,16 +108,24 @@ namespace teste
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ab3.Controls.Add(this.metroTabPage1);
+            this.ab3.Controls.Add(this.metroTabPage3);
             this.ab3.Controls.Add(this.metroTabPage2);
             this.ab3.Location = new System.Drawing.Point(11, 63);
             this.ab3.Name = "ab3";
-            this.ab3.SelectedIndex = 0;
-            this.ab3.Size = new System.Drawing.Size(802, 419);
+            this.ab3.SelectedIndex = 2;
+            this.ab3.Size = new System.Drawing.Size(802, 359);
             this.ab3.TabIndex = 0;
             // 
             // metroTabPage1
             // 
             this.metroTabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage1.Controls.Add(this.tbnasc);
+            this.metroTabPage1.Controls.Add(this.tbrecado);
+            this.metroTabPage1.Controls.Add(this.TBtelfixo);
+            this.metroTabPage1.Controls.Add(this.tbcel);
+            this.metroTabPage1.Controls.Add(this.tbcpf);
+            this.metroTabPage1.Controls.Add(this.cbTipoPessoa);
+            this.metroTabPage1.Controls.Add(this.metroLabel12);
             this.metroTabPage1.Controls.Add(this.cmbEstCivil);
             this.metroTabPage1.Controls.Add(this.metroLabel11);
             this.metroTabPage1.Controls.Add(this.cmbSexo);
@@ -125,18 +138,9 @@ namespace teste
             this.metroTabPage1.Controls.Add(this.metroLabel3);
             this.metroTabPage1.Controls.Add(this.metroLabel2);
             this.metroTabPage1.Controls.Add(this.metroLabel1);
-            this.metroTabPage1.Controls.Add(this.tbTelRecado);
-            this.metroTabPage1.Controls.Add(this.tbDtaNasc);
-            this.metroTabPage1.Controls.Add(this.tbTelFixo);
-            this.metroTabPage1.Controls.Add(this.tbTelCelular);
             this.metroTabPage1.Controls.Add(this.tbRg);
-            this.metroTabPage1.Controls.Add(this.tbCpf);
-            this.metroTabPage1.Controls.Add(this.Pesquisar);
-            this.metroTabPage1.Controls.Add(this.Limpar);
-            this.metroTabPage1.Controls.Add(this.Excluir);
             this.metroTabPage1.Controls.Add(this.metroLabel8);
             this.metroTabPage1.Controls.Add(this.tbSeq);
-            this.metroTabPage1.Controls.Add(this.Salvar);
             this.metroTabPage1.Controls.Add(this.metroLabel5);
             this.metroTabPage1.Controls.Add(this.metroButton1);
             this.metroTabPage1.Controls.Add(this.pictureBox1);
@@ -146,72 +150,233 @@ namespace teste
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(794, 380);
+            this.metroTabPage1.Size = new System.Drawing.Size(794, 320);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Dados Gerais";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
             // 
-            // Pesquisar
+            // tbnasc
             // 
-            this.Pesquisar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Pesquisar.FlatAppearance.BorderSize = 0;
-            this.Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Pesquisar.Image = global::MiniPack.Properties.Resources.icons8_search_24;
-            this.Pesquisar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Pesquisar.Location = new System.Drawing.Point(360, 308);
-            this.Pesquisar.Name = "Pesquisar";
-            this.Pesquisar.Size = new System.Drawing.Size(81, 46);
-            this.Pesquisar.TabIndex = 23;
-            this.Pesquisar.Text = "Pesquisar";
-            this.Pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Pesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Pesquisar.UseVisualStyleBackColor = false;
-            this.Pesquisar.Click += new System.EventHandler(this.Pesquisar_Click);
+            this.tbnasc.Location = new System.Drawing.Point(100, 199);
+            this.tbnasc.Mask = "00/00/0000";
+            this.tbnasc.Name = "tbnasc";
+            this.tbnasc.Size = new System.Drawing.Size(80, 20);
+            this.tbnasc.TabIndex = 48;
             // 
-            // Limpar
+            // tbrecado
             // 
-            this.Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Limpar.FlatAppearance.BorderSize = 0;
-            this.Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Limpar.Image = global::MiniPack.Properties.Resources.icons8_clear_formatting_24;
-            this.Limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Limpar.Location = new System.Drawing.Point(99, 308);
-            this.Limpar.Name = "Limpar";
-            this.Limpar.Size = new System.Drawing.Size(81, 46);
-            this.Limpar.TabIndex = 22;
-            this.Limpar.Text = "Limpar";
-            this.Limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Limpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Limpar.UseVisualStyleBackColor = false;
-            this.Limpar.Click += new System.EventHandler(this.Limpar_Click);
+            this.tbrecado.Location = new System.Drawing.Point(311, 201);
+            this.tbrecado.Mask = "(00) 00000-0000";
+            this.tbrecado.Name = "tbrecado";
+            this.tbrecado.Size = new System.Drawing.Size(104, 20);
+            this.tbrecado.TabIndex = 47;
             // 
-            // Excluir
+            // TBtelfixo
             // 
-            this.Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Excluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Excluir.FlatAppearance.BorderSize = 0;
-            this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Excluir.Image = global::MiniPack.Properties.Resources.icons8_cancel_24;
-            this.Excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Excluir.Location = new System.Drawing.Point(273, 308);
-            this.Excluir.Name = "Excluir";
-            this.Excluir.Size = new System.Drawing.Size(81, 46);
-            this.Excluir.TabIndex = 21;
-            this.Excluir.Text = "Excluir";
-            this.Excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Excluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Excluir.UseVisualStyleBackColor = false;
-            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
+            this.TBtelfixo.Location = new System.Drawing.Point(311, 162);
+            this.TBtelfixo.Mask = "(00) 00000-0000";
+            this.TBtelfixo.Name = "TBtelfixo";
+            this.TBtelfixo.Size = new System.Drawing.Size(104, 20);
+            this.TBtelfixo.TabIndex = 46;
+            // 
+            // tbcel
+            // 
+            this.tbcel.Location = new System.Drawing.Point(311, 125);
+            this.tbcel.Mask = "(00) 00000-0000";
+            this.tbcel.Name = "tbcel";
+            this.tbcel.Size = new System.Drawing.Size(104, 20);
+            this.tbcel.TabIndex = 45;
+            // 
+            // tbcpf
+            // 
+            this.tbcpf.Location = new System.Drawing.Point(99, 125);
+            this.tbcpf.Mask = "000.000.000-00";
+            this.tbcpf.Name = "tbcpf";
+            this.tbcpf.Size = new System.Drawing.Size(104, 20);
+            this.tbcpf.TabIndex = 44;
+            // 
+            // cbTipoPessoa
+            // 
+            this.cbTipoPessoa.DisplayMember = "DESCRICAO";
+            this.cbTipoPessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoPessoa.FormattingEnabled = true;
+            this.cbTipoPessoa.ItemHeight = 13;
+            this.cbTipoPessoa.Items.AddRange(new object[] {
+            "Cliente",
+            "Funcionário"});
+            this.cbTipoPessoa.Location = new System.Drawing.Point(310, 40);
+            this.cbTipoPessoa.Name = "cbTipoPessoa";
+            this.cbTipoPessoa.Size = new System.Drawing.Size(157, 21);
+            this.cbTipoPessoa.TabIndex = 43;
+            this.cbTipoPessoa.SelectedIndexChanged += new System.EventHandler(this.cbTipoPessoa_SelectedIndexChanged);
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel12.CustomBackground = true;
+            this.metroLabel12.Location = new System.Drawing.Point(230, 41);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel12.TabIndex = 42;
+            this.metroLabel12.Text = "Tipo Pessoa";
+            // 
+            // cmbEstCivil
+            // 
+            this.cmbEstCivil.DisplayMember = "DESCRICAO";
+            this.cmbEstCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstCivil.FormattingEnabled = true;
+            this.cmbEstCivil.ItemHeight = 13;
+            this.cmbEstCivil.Items.AddRange(new object[] {
+            "Solteiro",
+            "Casado",
+            "Divorciado",
+            "Outros"});
+            this.cmbEstCivil.Location = new System.Drawing.Point(310, 240);
+            this.cmbEstCivil.Name = "cmbEstCivil";
+            this.cmbEstCivil.Size = new System.Drawing.Size(157, 21);
+            this.cmbEstCivil.TabIndex = 41;
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel11.CustomBackground = true;
+            this.metroLabel11.Location = new System.Drawing.Point(229, 242);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel11.TabIndex = 40;
+            this.metroLabel11.Text = "Estado Civil";
+            // 
+            // cmbSexo
+            // 
+            this.cmbSexo.DisplayMember = "DESCRICAO";
+            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.ItemHeight = 13;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino",
+            "Indefinido"});
+            this.cmbSexo.Location = new System.Drawing.Point(99, 242);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(115, 21);
+            this.cmbSexo.TabIndex = 39;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel10.CustomBackground = true;
+            this.metroLabel10.Location = new System.Drawing.Point(23, 244);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel10.TabIndex = 38;
+            this.metroLabel10.Text = "Sexo";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BackColor = System.Drawing.Color.White;
+            this.tbEmail.CustomBackground = true;
+            this.tbEmail.Location = new System.Drawing.Point(99, 279);
+            this.tbEmail.MaxLength = 250;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(368, 23);
+            this.tbEmail.TabIndex = 37;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel9.CustomBackground = true;
+            this.metroLabel9.Location = new System.Drawing.Point(23, 283);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(47, 19);
+            this.metroLabel9.TabIndex = 36;
+            this.metroLabel9.Text = "E-mail";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel7.CustomBackground = true;
+            this.metroLabel7.Location = new System.Drawing.Point(23, 129);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel7.TabIndex = 35;
+            this.metroLabel7.Text = "CPF";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel6.CustomBackground = true;
+            this.metroLabel6.Location = new System.Drawing.Point(23, 162);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(26, 19);
+            this.metroLabel6.TabIndex = 34;
+            this.metroLabel6.Text = "RG";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel4.CustomBackground = true;
+            this.metroLabel4.Location = new System.Drawing.Point(23, 200);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel4.TabIndex = 33;
+            this.metroLabel4.Text = "Data Nasc.";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel3.CustomBackground = true;
+            this.metroLabel3.Location = new System.Drawing.Point(232, 129);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel3.TabIndex = 32;
+            this.metroLabel3.Text = "Tel. Celular";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel2.CustomBackground = true;
+            this.metroLabel2.Location = new System.Drawing.Point(232, 162);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel2.TabIndex = 31;
+            this.metroLabel2.Text = "Tel. Fixo";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel1.CustomBackground = true;
+            this.metroLabel1.Location = new System.Drawing.Point(232, 202);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel1.TabIndex = 30;
+            this.metroLabel1.Text = "Tel. Recado";
+            // 
+            // tbRg
+            // 
+            this.tbRg.BackColor = System.Drawing.Color.White;
+            this.tbRg.CustomBackground = true;
+            this.tbRg.Location = new System.Drawing.Point(99, 158);
+            this.tbRg.MaxLength = 250;
+            this.tbRg.Name = "tbRg";
+            this.tbRg.Size = new System.Drawing.Size(104, 23);
+            this.tbRg.TabIndex = 25;
             // 
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel8.CustomBackground = true;
-            this.metroLabel8.Location = new System.Drawing.Point(52, 40);
+            this.metroLabel8.Location = new System.Drawing.Point(23, 40);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(31, 19);
             this.metroLabel8.TabIndex = 20;
@@ -225,24 +390,6 @@ namespace teste
             this.tbSeq.Name = "tbSeq";
             this.tbSeq.Size = new System.Drawing.Size(81, 23);
             this.tbSeq.TabIndex = 19;
-            // 
-            // Salvar
-            // 
-            this.Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Salvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Salvar.FlatAppearance.BorderSize = 0;
-            this.Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Salvar.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
-            this.Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Salvar.Location = new System.Drawing.Point(186, 308);
-            this.Salvar.Name = "Salvar";
-            this.Salvar.Size = new System.Drawing.Size(81, 46);
-            this.Salvar.TabIndex = 14;
-            this.Salvar.Text = "Salvar";
-            this.Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Salvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Salvar.UseVisualStyleBackColor = false;
-            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // metroLabel5
             // 
@@ -282,7 +429,7 @@ namespace teste
             this.tbNomeRazao.AutoSize = true;
             this.tbNomeRazao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbNomeRazao.CustomBackground = true;
-            this.tbNomeRazao.Location = new System.Drawing.Point(37, 82);
+            this.tbNomeRazao.Location = new System.Drawing.Point(23, 82);
             this.tbNomeRazao.Name = "tbNomeRazao";
             this.tbNomeRazao.Size = new System.Drawing.Size(46, 19);
             this.tbNomeRazao.TabIndex = 3;
@@ -298,163 +445,71 @@ namespace teste
             this.tbDescricao.Size = new System.Drawing.Size(368, 23);
             this.tbDescricao.TabIndex = 2;
             // 
-            // ribbonUpDown1
+            // metroTabPage3
             // 
-            this.ribbonUpDown1.TextBoxText = "";
-            this.ribbonUpDown1.TextBoxWidth = 50;
+            this.metroTabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage3.Controls.Add(this.metroLabel14);
+            this.metroTabPage3.Controls.Add(this.tbSenha);
+            this.metroTabPage3.Controls.Add(this.metroLabel13);
+            this.metroTabPage3.Controls.Add(this.tbID);
+            this.metroTabPage3.CustomBackground = true;
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(794, 320);
+            this.metroTabPage3.TabIndex = 3;
+            this.metroTabPage3.Text = "Acesso";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
             // 
-            // tbCpf
+            // metroLabel14
             // 
-            this.tbCpf.BackColor = System.Drawing.Color.White;
-            this.tbCpf.CustomBackground = true;
-            this.tbCpf.Location = new System.Drawing.Point(99, 125);
-            this.tbCpf.MaxLength = 250;
-            this.tbCpf.Name = "tbCpf";
-            this.tbCpf.Size = new System.Drawing.Size(104, 23);
-            this.tbCpf.TabIndex = 24;
-            this.tbCpf.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel14.CustomBackground = true;
+            this.metroLabel14.Location = new System.Drawing.Point(109, 93);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel14.TabIndex = 7;
+            this.metroLabel14.Text = "Senha";
             // 
-            // tbRg
+            // tbSenha
             // 
-            this.tbRg.BackColor = System.Drawing.Color.White;
-            this.tbRg.CustomBackground = true;
-            this.tbRg.Location = new System.Drawing.Point(99, 158);
-            this.tbRg.MaxLength = 250;
-            this.tbRg.Name = "tbRg";
-            this.tbRg.Size = new System.Drawing.Size(104, 23);
-            this.tbRg.TabIndex = 25;
+            this.tbSenha.BackColor = System.Drawing.Color.White;
+            this.tbSenha.CustomBackground = true;
+            this.tbSenha.Location = new System.Drawing.Point(185, 93);
+            this.tbSenha.MaxLength = 15;
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
+            this.tbSenha.Size = new System.Drawing.Size(148, 23);
+            this.tbSenha.TabIndex = 6;
             // 
-            // tbTelCelular
+            // metroLabel13
             // 
-            this.tbTelCelular.BackColor = System.Drawing.Color.White;
-            this.tbTelCelular.CustomBackground = true;
-            this.tbTelCelular.Location = new System.Drawing.Point(310, 125);
-            this.tbTelCelular.MaxLength = 250;
-            this.tbTelCelular.Name = "tbTelCelular";
-            this.tbTelCelular.Size = new System.Drawing.Size(157, 23);
-            this.tbTelCelular.TabIndex = 26;
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel13.CustomBackground = true;
+            this.metroLabel13.Location = new System.Drawing.Point(109, 64);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(21, 19);
+            this.metroLabel13.TabIndex = 5;
+            this.metroLabel13.Text = "ID";
             // 
-            // tbTelFixo
+            // tbID
             // 
-            this.tbTelFixo.BackColor = System.Drawing.Color.White;
-            this.tbTelFixo.CustomBackground = true;
-            this.tbTelFixo.Location = new System.Drawing.Point(310, 158);
-            this.tbTelFixo.MaxLength = 250;
-            this.tbTelFixo.Name = "tbTelFixo";
-            this.tbTelFixo.Size = new System.Drawing.Size(157, 23);
-            this.tbTelFixo.TabIndex = 27;
-            // 
-            // tbDtaNasc
-            // 
-            this.tbDtaNasc.BackColor = System.Drawing.Color.White;
-            this.tbDtaNasc.CustomBackground = true;
-            this.tbDtaNasc.Location = new System.Drawing.Point(99, 198);
-            this.tbDtaNasc.MaxLength = 250;
-            this.tbDtaNasc.Name = "tbDtaNasc";
-            this.tbDtaNasc.Size = new System.Drawing.Size(104, 23);
-            this.tbDtaNasc.TabIndex = 28;
-            // 
-            // tbTelRecado
-            // 
-            this.tbTelRecado.BackColor = System.Drawing.Color.White;
-            this.tbTelRecado.CustomBackground = true;
-            this.tbTelRecado.Location = new System.Drawing.Point(310, 198);
-            this.tbTelRecado.MaxLength = 250;
-            this.tbTelRecado.Name = "tbTelRecado";
-            this.tbTelRecado.Size = new System.Drawing.Size(157, 23);
-            this.tbTelRecado.TabIndex = 29;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel1.CustomBackground = true;
-            this.metroLabel1.Location = new System.Drawing.Point(229, 202);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(75, 19);
-            this.metroLabel1.TabIndex = 30;
-            this.metroLabel1.Text = "Tel. Recado";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel2.CustomBackground = true;
-            this.metroLabel2.Location = new System.Drawing.Point(249, 162);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel2.TabIndex = 31;
-            this.metroLabel2.Text = "Tel. Fixo";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel3.CustomBackground = true;
-            this.metroLabel3.Location = new System.Drawing.Point(232, 129);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel3.TabIndex = 32;
-            this.metroLabel3.Text = "Tel. Celular";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel4.CustomBackground = true;
-            this.metroLabel4.Location = new System.Drawing.Point(12, 202);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(71, 19);
-            this.metroLabel4.TabIndex = 33;
-            this.metroLabel4.Text = "Data Nasc.";
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel6.CustomBackground = true;
-            this.metroLabel6.Location = new System.Drawing.Point(57, 162);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(26, 19);
-            this.metroLabel6.TabIndex = 34;
-            this.metroLabel6.Text = "RG";
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel7.CustomBackground = true;
-            this.metroLabel7.Location = new System.Drawing.Point(50, 129);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(33, 19);
-            this.metroLabel7.TabIndex = 35;
-            this.metroLabel7.Text = "CPF";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel9.CustomBackground = true;
-            this.metroLabel9.Location = new System.Drawing.Point(36, 283);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(47, 19);
-            this.metroLabel9.TabIndex = 36;
-            this.metroLabel9.Text = "E-mail";
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.BackColor = System.Drawing.Color.White;
-            this.tbEmail.CustomBackground = true;
-            this.tbEmail.Location = new System.Drawing.Point(99, 279);
-            this.tbEmail.MaxLength = 250;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(368, 23);
-            this.tbEmail.TabIndex = 37;
-            this.tbEmail.Click += new System.EventHandler(this.metroTextBox7_Click);
+            this.tbID.BackColor = System.Drawing.Color.White;
+            this.tbID.CustomBackground = true;
+            this.tbID.Location = new System.Drawing.Point(185, 64);
+            this.tbID.MaxLength = 15;
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(148, 23);
+            this.tbID.TabIndex = 4;
             // 
             // metroTabPage2
             // 
             this.metroTabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage2.Controls.Add(this.button1);
+            this.metroTabPage2.Controls.Add(this.tbNro);
+            this.metroTabPage2.Controls.Add(this.tbCep);
             this.metroTabPage2.Controls.Add(this.tbPais);
             this.metroTabPage2.Controls.Add(this.metroLabel19);
             this.metroTabPage2.Controls.Add(this.metroLabel20);
@@ -464,25 +519,37 @@ namespace teste
             this.metroTabPage2.Controls.Add(this.metroLabel25);
             this.metroTabPage2.Controls.Add(this.tbUf);
             this.metroTabPage2.Controls.Add(this.tbCidade);
-            this.metroTabPage2.Controls.Add(this.tbNumero);
             this.metroTabPage2.Controls.Add(this.tbComplemento);
             this.metroTabPage2.Controls.Add(this.tbBairro);
-            this.metroTabPage2.Controls.Add(this.button5);
-            this.metroTabPage2.Controls.Add(this.button6);
-            this.metroTabPage2.Controls.Add(this.button7);
             this.metroTabPage2.Controls.Add(this.metroLabel26);
-            this.metroTabPage2.Controls.Add(this.tbCep);
-            this.metroTabPage2.Controls.Add(this.button8);
             this.metroTabPage2.Controls.Add(this.metroLabel28);
             this.metroTabPage2.Controls.Add(this.tbLogradouro);
             this.metroTabPage2.CustomBackground = true;
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(794, 380);
+            this.metroTabPage2.Size = new System.Drawing.Size(794, 320);
             this.metroTabPage2.TabIndex = 2;
             this.metroTabPage2.Text = "Endereco";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
+            // 
+            // tbNro
+            // 
+            this.tbNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNro.Location = new System.Drawing.Point(523, 82);
+            this.tbNro.Mask = "00000";
+            this.tbNro.Name = "tbNro";
+            this.tbNro.Size = new System.Drawing.Size(66, 22);
+            this.tbNro.TabIndex = 39;
+            // 
+            // tbCep
+            // 
+            this.tbCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCep.Location = new System.Drawing.Point(99, 44);
+            this.tbCep.Mask = "00000-999";
+            this.tbCep.Name = "tbCep";
+            this.tbCep.Size = new System.Drawing.Size(100, 22);
+            this.tbCep.TabIndex = 38;
             // 
             // tbPais
             // 
@@ -504,7 +571,6 @@ namespace teste
             this.metroLabel19.Size = new System.Drawing.Size(31, 19);
             this.metroLabel19.TabIndex = 36;
             this.metroLabel19.Text = "Pais";
-            this.metroLabel19.Click += new System.EventHandler(this.metroLabel19_Click);
             // 
             // metroLabel20
             // 
@@ -544,11 +610,11 @@ namespace teste
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel23.CustomBackground = true;
-            this.metroLabel23.Location = new System.Drawing.Point(493, 86);
+            this.metroLabel23.Location = new System.Drawing.Point(485, 84);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(19, 19);
+            this.metroLabel23.Size = new System.Drawing.Size(32, 19);
             this.metroLabel23.TabIndex = 32;
-            this.metroLabel23.Text = "N";
+            this.metroLabel23.Text = "Nro";
             // 
             // metroLabel25
             // 
@@ -566,7 +632,7 @@ namespace teste
             this.tbUf.BackColor = System.Drawing.Color.White;
             this.tbUf.CustomBackground = true;
             this.tbUf.Location = new System.Drawing.Point(413, 198);
-            this.tbUf.MaxLength = 250;
+            this.tbUf.MaxLength = 2;
             this.tbUf.Name = "tbUf";
             this.tbUf.Size = new System.Drawing.Size(54, 23);
             this.tbUf.TabIndex = 29;
@@ -580,16 +646,6 @@ namespace teste
             this.tbCidade.Name = "tbCidade";
             this.tbCidade.Size = new System.Drawing.Size(271, 23);
             this.tbCidade.TabIndex = 28;
-            // 
-            // tbNumero
-            // 
-            this.tbNumero.BackColor = System.Drawing.Color.White;
-            this.tbNumero.CustomBackground = true;
-            this.tbNumero.Location = new System.Drawing.Point(518, 82);
-            this.tbNumero.MaxLength = 250;
-            this.tbNumero.Name = "tbNumero";
-            this.tbNumero.Size = new System.Drawing.Size(52, 23);
-            this.tbNumero.TabIndex = 26;
             // 
             // tbComplemento
             // 
@@ -611,93 +667,16 @@ namespace teste
             this.tbBairro.Size = new System.Drawing.Size(368, 23);
             this.tbBairro.TabIndex = 24;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = global::MiniPack.Properties.Resources.icons8_search_24;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(360, 308);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(81, 46);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "button5";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = global::MiniPack.Properties.Resources.icons8_clear_formatting_24;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(99, 308);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(81, 46);
-            this.button6.TabIndex = 22;
-            this.button6.Text = "button6";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::MiniPack.Properties.Resources.icons8_cancel_24;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(273, 308);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(81, 46);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "button7";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
             // metroLabel26
             // 
             this.metroLabel26.AutoSize = true;
             this.metroLabel26.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel26.CustomBackground = true;
-            this.metroLabel26.Location = new System.Drawing.Point(60, 40);
+            this.metroLabel26.Location = new System.Drawing.Point(60, 44);
             this.metroLabel26.Name = "metroLabel26";
             this.metroLabel26.Size = new System.Drawing.Size(33, 19);
             this.metroLabel26.TabIndex = 20;
             this.metroLabel26.Text = "CEP";
-            // 
-            // tbCep
-            // 
-            this.tbCep.BackColor = System.Drawing.Color.White;
-            this.tbCep.CustomBackground = true;
-            this.tbCep.Location = new System.Drawing.Point(99, 40);
-            this.tbCep.Name = "tbCep";
-            this.tbCep.Size = new System.Drawing.Size(104, 23);
-            this.tbCep.TabIndex = 19;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button8.Location = new System.Drawing.Point(186, 308);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(81, 46);
-            this.button8.TabIndex = 14;
-            this.button8.Text = "button8";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // metroLabel28
             // 
@@ -720,66 +699,121 @@ namespace teste
             this.tbLogradouro.Size = new System.Drawing.Size(368, 23);
             this.tbLogradouro.TabIndex = 2;
             // 
-            // metroLabel10
+            // Pesquisar
             // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel10.CustomBackground = true;
-            this.metroLabel10.Location = new System.Drawing.Point(46, 244);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel10.TabIndex = 38;
-            this.metroLabel10.Text = "Sexo";
+            this.Pesquisar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Pesquisar.FlatAppearance.BorderSize = 0;
+            this.Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pesquisar.Image = global::MiniPack.Properties.Resources.icons8_search_24;
+            this.Pesquisar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Pesquisar.Location = new System.Drawing.Point(401, 456);
+            this.Pesquisar.Name = "Pesquisar";
+            this.Pesquisar.Size = new System.Drawing.Size(81, 46);
+            this.Pesquisar.TabIndex = 23;
+            this.Pesquisar.Text = "Pesquisar";
+            this.Pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Pesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Pesquisar.UseVisualStyleBackColor = false;
+            this.Pesquisar.Click += new System.EventHandler(this.Pesquisar_Click);
             // 
-            // cmbSexo
+            // Limpar
             // 
-            this.cmbSexo.DisplayMember = "DESCRICAO";
-            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.ItemHeight = 13;
-            this.cmbSexo.Location = new System.Drawing.Point(99, 242);
-            this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(115, 21);
-            this.cmbSexo.TabIndex = 39;
+            this.Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Limpar.FlatAppearance.BorderSize = 0;
+            this.Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Limpar.Image = global::MiniPack.Properties.Resources.icons8_clear_formatting_24;
+            this.Limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Limpar.Location = new System.Drawing.Point(140, 456);
+            this.Limpar.Name = "Limpar";
+            this.Limpar.Size = new System.Drawing.Size(81, 46);
+            this.Limpar.TabIndex = 22;
+            this.Limpar.Text = "Limpar";
+            this.Limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Limpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Limpar.UseVisualStyleBackColor = false;
+            this.Limpar.Click += new System.EventHandler(this.Limpar_Click);
             // 
-            // metroLabel11
+            // Excluir
             // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel11.CustomBackground = true;
-            this.metroLabel11.Location = new System.Drawing.Point(228, 242);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(76, 19);
-            this.metroLabel11.TabIndex = 40;
-            this.metroLabel11.Text = "Estado Civil";
+            this.Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Excluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Excluir.FlatAppearance.BorderSize = 0;
+            this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Excluir.Image = global::MiniPack.Properties.Resources.icons8_cancel_24;
+            this.Excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Excluir.Location = new System.Drawing.Point(314, 456);
+            this.Excluir.Name = "Excluir";
+            this.Excluir.Size = new System.Drawing.Size(81, 46);
+            this.Excluir.TabIndex = 21;
+            this.Excluir.Text = "Excluir";
+            this.Excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Excluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Excluir.UseVisualStyleBackColor = false;
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
-            // cmbEstCivil
+            // Salvar
             // 
-            this.cmbEstCivil.DisplayMember = "DESCRICAO";
-            this.cmbEstCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstCivil.FormattingEnabled = true;
-            this.cmbEstCivil.ItemHeight = 13;
-            this.cmbEstCivil.Location = new System.Drawing.Point(310, 240);
-            this.cmbEstCivil.Name = "cmbEstCivil";
-            this.cmbEstCivil.Size = new System.Drawing.Size(157, 21);
-            this.cmbEstCivil.TabIndex = 41;
+            this.Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Salvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Salvar.FlatAppearance.BorderSize = 0;
+            this.Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Salvar.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
+            this.Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Salvar.Location = new System.Drawing.Point(227, 456);
+            this.Salvar.Name = "Salvar";
+            this.Salvar.Size = new System.Drawing.Size(81, 46);
+            this.Salvar.TabIndex = 14;
+            this.Salvar.Text = "Salvar";
+            this.Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Salvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Salvar.UseVisualStyleBackColor = false;
+            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
+            // 
+            // ribbonUpDown1
+            // 
+            this.ribbonUpDown1.TextBoxText = "";
+            this.ribbonUpDown1.TextBoxWidth = 50;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::MiniPack.Properties.Resources.icons8_search_24;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(204, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 26);
+            this.button1.TabIndex = 24;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(836, 540);
+            this.ClientSize = new System.Drawing.Size(836, 527);
             this.Controls.Add(this.ab3);
+            this.Controls.Add(this.Pesquisar);
+            this.Controls.Add(this.Salvar);
+            this.Controls.Add(this.Excluir);
+            this.Controls.Add(this.Limpar);
             this.MinimumSize = new System.Drawing.Size(473, 408);
             this.Name = "frmCadastroCliente";
             this.Resizable = false;
-            this.Text = "Cadastro De Clientes";
+            this.Text = "Cadastro De Pessoas";
             this.Load += new System.EventHandler(this.frmCadastroProduto_Load);
             this.ab3.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.metroTabPage3.ResumeLayout(false);
+            this.metroTabPage3.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -1547,7 +1581,6 @@ namespace teste
         private System.Windows.Forms.Button Excluir;
         private System.Windows.Forms.Button Limpar;
         private System.Windows.Forms.Button Pesquisar;
-        private MetroFramework.Controls.MetroTextBox tbCpf;
         private MetroFramework.Controls.MetroTextBox tbEmail;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel7;
@@ -1556,10 +1589,6 @@ namespace teste
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox tbTelRecado;
-        private MetroFramework.Controls.MetroTextBox tbDtaNasc;
-        private MetroFramework.Controls.MetroTextBox tbTelFixo;
-        private MetroFramework.Controls.MetroTextBox tbTelCelular;
         private MetroFramework.Controls.MetroTextBox tbRg;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTextBox tbPais;
@@ -1571,21 +1600,30 @@ namespace teste
         private MetroFramework.Controls.MetroLabel metroLabel25;
         private MetroFramework.Controls.MetroTextBox tbUf;
         private MetroFramework.Controls.MetroTextBox tbCidade;
-        private MetroFramework.Controls.MetroTextBox tbNumero;
         private MetroFramework.Controls.MetroTextBox tbComplemento;
         private MetroFramework.Controls.MetroTextBox tbBairro;
-        private Button button5;
-        private Button button6;
-        private Button button7;
         private MetroFramework.Controls.MetroLabel metroLabel26;
-        private MetroFramework.Controls.MetroTextBox tbCep;
-        private Button button8;
         private MetroFramework.Controls.MetroLabel metroLabel28;
         private MetroFramework.Controls.MetroTextBox tbLogradouro;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private ComboBox cmbSexo;
         private ComboBox cmbEstCivil;
+        private ComboBox cbTipoPessoa;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MaskedTextBox tbNro;
+        private MaskedTextBox tbCep;
+        private MaskedTextBox tbcpf;
+        private MaskedTextBox tbcel;
+        private MaskedTextBox tbrecado;
+        private MaskedTextBox TBtelfixo;
+        private MaskedTextBox tbnasc;
+        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroTextBox tbSenha;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
+        private MetroFramework.Controls.MetroTextBox tbID;
+        private Button button1;
 
         public override bool AllowDrop { get => base.AllowDrop; set => base.AllowDrop = value; }
         public override AnchorStyles Anchor { get => base.Anchor; set => base.Anchor = value; }

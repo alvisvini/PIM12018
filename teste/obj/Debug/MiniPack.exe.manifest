@@ -47,6 +47,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Correios.Net.dll" size="11264">
+      <assemblyIdentity name="Correios.Net" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>PUmbGTNEZZ2dIQCbxXSu89zMa/xKbLi19Vfteqpclxc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Devart.Data.dll" size="287912">
       <assemblyIdentity name="Devart.Data" version="5.0.1926.0" publicKeyToken="09AF7300EEC23701" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -107,14 +119,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiniPack.exe" size="203248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiniPack.exe" size="240624">
       <assemblyIdentity name="MiniPack" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KdGjG3JqJGH0PAmbMerHrCk19EfpQ50mgVyJ3IYjGVQ=</dsig:DigestValue>
+        <dsig:DigestValue>VSTRaCdm0a6koLpgwU2vabGHys2Bx03iinLWv/wfiKc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

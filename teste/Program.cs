@@ -1,4 +1,5 @@
 ﻿using MiniPack;
+using MiniPack.Login.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace teste
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDI());
+            Application.Run(new TelaLogin());
         }
     }
 }

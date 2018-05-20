@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MiniPack.Produto.model;
+using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -11,7 +13,7 @@ namespace MiniPack.Produto.control
             try
             {
                 Banco.Open();
-                string cmdText = "INSERT INTO GE_PRODUTO(descricao,marca,obs,seqcategoria,preco,tamanho,imagem, quantidade) VALUES (?desc,?marca, ?obs, ?seqcateg, ?preco, ?tamanho, ?imagem, ?quantidade);";
+                string cmdText = "INSERT INTO GE_PRODUTO(descricao,marca,obs,seqcategoria,preco,tamanho,imagem, quantidade,cod) VALUES (?desc,?marca, ?obs, ?seqcateg, ?preco, ?tamanho, ?imagem, ?quantidade,?Cod);";
                 MySqlCommand cmd = new MySqlCommand(cmdText, Banco.connection);
                 cmd.Parameters.AddWithValue("?desc", p.Desc);
                 cmd.Parameters.AddWithValue("?marca", p.Marca);
@@ -21,6 +23,7 @@ namespace MiniPack.Produto.control
                 cmd.Parameters.AddWithValue("?tamanho", p.Tamanho);
                 cmd.Parameters.AddWithValue("?imagem", p.Imagem);
                 cmd.Parameters.AddWithValue("?quantidade", p.Quantidade);
+                cmd.Parameters.AddWithValue("?Cod", p.Cod);
                 cmd.ExecuteNonQuery();
                 Banco.Close();
                 return true;
@@ -38,7 +41,7 @@ namespace MiniPack.Produto.control
             try
             {
                 Banco.Open();
-                string cmdText = "update GE_PRODUTO set descricao = ?desc, marca = ?marca, obs = ?obs, seqcategoria = ?categ, preco = ?preco, tamanho = ?tam, imagem = ?img, quantidade = ?qtde where seq = ?seq;";
+                string cmdText = "update GE_PRODUTO set descricao = ?desc, marca = ?marca, obs = ?obs, seqcategoria = ?categ, preco = ?preco, tamanho = ?tam, imagem = ?img, quantidade = ?qtde, cod = ?cod where seq = ?seq;";
                 MySqlCommand cmd = new MySqlCommand(cmdText, Banco.connection);
                 cmd.Parameters.AddWithValue("?desc", p.Desc);
                 cmd.Parameters.AddWithValue("?marca", p.Marca);
@@ -49,6 +52,7 @@ namespace MiniPack.Produto.control
                 cmd.Parameters.AddWithValue("?tam", p.Tamanho);
                 cmd.Parameters.AddWithValue("?img", p.Imagem);
                 cmd.Parameters.AddWithValue("?qtde", p.Quantidade);
+                cmd.Parameters.AddWithValue("?cod", p.Cod);
                 cmd.ExecuteNonQuery();
                 Banco.Close();
                 return true;
@@ -79,9 +83,9 @@ namespace MiniPack.Produto.control
             }
         }
 
-        public model.Produto Pesquisar(int seq)
+        public model.Produto Pesquisar(string cod)
         {
-            string strSQL = "Select seq,descricao,marca,obs,seqcategoria,preco,tamanho,imagem,quantidade From ge_produto where seq = " + seq;
+            string strSQL = "Select seq,descricao,marca,obs,seqcategoria,preco,tamanho,imagem,quantidade,cod From ge_produto where cod = " + cod;
             model.Produto p = null;
             try
             {
@@ -103,6 +107,8 @@ namespace MiniPack.Produto.control
                         p.Tamanho = Reader.GetInt16("tamanho");
                         p.Imagem = Reader.GetString("imagem");
                         p.Quantidade = Reader.GetInt16("quantidade");
+                        p.Cod = Reader.GetString("cod");
+                       
                     }
                 }
                 Reader.Close();
@@ -116,7 +122,6 @@ namespace MiniPack.Produto.control
                 return p;
             }
         }
-
 
         public DataTable GetProdutos(string where)
         {

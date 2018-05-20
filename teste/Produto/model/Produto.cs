@@ -11,6 +11,8 @@
         private int tamanho;
         private string imagem;
         private int quantidade;
+        private string cod;
+      
 
         public Produto() { }
 
@@ -23,6 +25,7 @@
         public int Tamanho { get => tamanho; set => tamanho = value; }
         public string Imagem { get => imagem; set => imagem = value; }
         public int Quantidade { get => quantidade; set => quantidade = value; }
+        public string Cod { get => cod; set => cod = value; }
     }
 }
 

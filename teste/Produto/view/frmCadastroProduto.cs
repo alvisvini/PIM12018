@@ -44,6 +44,7 @@ namespace teste
                 p.Tamanho = Convert.ToInt32(tbTamanho.Value);
                 p.Imagem = urlImagem;
                 p.Quantidade = Convert.ToInt16(tbEsqtoque.Value);
+                p.Cod = Tbcod.Text;                
 
                 ProdutoController control = new ProdutoController();
 
@@ -92,13 +93,7 @@ namespace teste
 
         private void frmCadastroProduto_Load(object sender, EventArgs e)
         {
-            categoria.DisplayMember = "DESCRICAO";
-            categoria.ValueMember = "SEQ";
-            ProdutoController control = new ProdutoController();
-            categoria.DataSource = control.GetCategorias();
-            categoria.SelectedIndex = -1;
-            carregado = false;
-            pbImagem.Image = MiniPack.Properties.Resources.unavailable;
+            limpaTela();
         }
 
         private void Limpar_Click(object sender, EventArgs e)
@@ -115,24 +110,32 @@ namespace teste
             categoria.SelectedIndex = -1;
             tbPreco.Value = 0;
             tbTamanho.Value = 0;
+            Tbcod.Text = "";
             pbImagem.Image = MiniPack.Properties.Resources.unavailable;
             urlImagem = Directory.GetCurrentDirectory() + "\\unavailable.png";
             tbEsqtoque.Value = 0;
-
+            Tbcod.Text = "";
             carregado = false;
+            categoria.DisplayMember = "DESCRICAO";
+            categoria.ValueMember = "SEQ";
+            ProdutoController control = new ProdutoController();
+            categoria.DataSource = control.GetCategorias();
+            categoria.SelectedIndex = -1;
+            carregado = false;
+            pbImagem.Image = MiniPack.Properties.Resources.unavailable;
         }
 
         private void Pesquisar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbSeq.Text))
+            if (string.IsNullOrEmpty(Tbcod.Text))
             {
-                MessageBox.Show("Informe o Seq", "Atencao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Informe o Codigo", "Atencao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             Produto p = new Produto();
             ProdutoController control = new ProdutoController();
-            p = control.Pesquisar(Convert.ToInt16(tbSeq.Text));
+            p = control.Pesquisar(Tbcod.Text);
             if(p == null)
             {
                 MessageBox.Show("Produto nao encontrado!", "Atencao", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -148,6 +151,7 @@ namespace teste
             pbImagem.Image = MiniPack.Properties.Resources.unavailable;
             pbImagem.ImageLocation = p.Imagem;
             tbEsqtoque.Value = p.Quantidade;
+            Tbcod.Text = p.Cod;
             carregado = true;
         }
     }

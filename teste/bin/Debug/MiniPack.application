@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="MiniPack.exe.manifest" size="9340">
+    <dependentAssembly dependencyType="install" codebase="MiniPack.exe.manifest" size="9982">
       <assemblyIdentity name="MiniPack.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SXcLb5OOlWEjIiLIhXp4kX4DdlbnWJ8nrndT6Th/q4g=</dsig:DigestValue>
+        <dsig:DigestValue>We2Xk0P6FZkpSePptrajTQtUkmmEVf4e7RBC4BiXtN8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

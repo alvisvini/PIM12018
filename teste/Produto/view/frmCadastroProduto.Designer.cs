@@ -30,6 +30,8 @@
         {
             this.ab3 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.Tbcod = new MetroFramework.Controls.MetroTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbEsqtoque = new System.Windows.Forms.NumericUpDown();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
@@ -51,10 +53,10 @@
             this.pbImagem = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tbDescricao = new MetroFramework.Controls.MetroTextBox();
-            this.Pesquisar = new System.Windows.Forms.Button();
-            this.Limpar = new System.Windows.Forms.Button();
-            this.Excluir = new System.Windows.Forms.Button();
             this.Salvar = new System.Windows.Forms.Button();
+            this.Pesquisar = new System.Windows.Forms.Button();
+            this.Excluir = new System.Windows.Forms.Button();
+            this.Limpar = new System.Windows.Forms.Button();
             this.ribbonUpDown1 = new System.Windows.Forms.RibbonUpDown();
             this.ab3.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -66,24 +68,19 @@
             // 
             // ab3
             // 
-            this.ab3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ab3.Controls.Add(this.metroTabPage1);
             this.ab3.Location = new System.Drawing.Point(11, 63);
             this.ab3.Name = "ab3";
             this.ab3.SelectedIndex = 0;
-            this.ab3.Size = new System.Drawing.Size(775, 485);
+            this.ab3.Size = new System.Drawing.Size(775, 401);
             this.ab3.TabIndex = 0;
             // 
             // metroTabPage1
             // 
             this.metroTabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage1.Controls.Add(this.Salvar);
-            this.metroTabPage1.Controls.Add(this.Pesquisar);
-            this.metroTabPage1.Controls.Add(this.Excluir);
+            this.metroTabPage1.Controls.Add(this.metroLabel10);
+            this.metroTabPage1.Controls.Add(this.Tbcod);
             this.metroTabPage1.Controls.Add(this.label2);
-            this.metroTabPage1.Controls.Add(this.Limpar);
             this.metroTabPage1.Controls.Add(this.tbEsqtoque);
             this.metroTabPage1.Controls.Add(this.metroLabel9);
             this.metroTabPage1.Controls.Add(this.label1);
@@ -108,10 +105,32 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(767, 446);
+            this.metroTabPage1.Size = new System.Drawing.Size(767, 362);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Dados Gerais";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel10.CustomBackground = true;
+            this.metroLabel10.Location = new System.Drawing.Point(232, 42);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel10.TabIndex = 30;
+            this.metroLabel10.Text = "Cod Barras";
+            // 
+            // Tbcod
+            // 
+            this.Tbcod.BackColor = System.Drawing.Color.White;
+            this.Tbcod.CustomBackground = true;
+            this.Tbcod.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.Tbcod.Location = new System.Drawing.Point(313, 40);
+            this.Tbcod.MaxLength = 15;
+            this.Tbcod.Name = "Tbcod";
+            this.Tbcod.Size = new System.Drawing.Size(181, 23);
+            this.Tbcod.TabIndex = 29;
             // 
             // label2
             // 
@@ -182,6 +201,7 @@
             // 
             this.tbSeq.BackColor = System.Drawing.Color.White;
             this.tbSeq.CustomBackground = true;
+            this.tbSeq.Enabled = false;
             this.tbSeq.Location = new System.Drawing.Point(99, 40);
             this.tbSeq.Name = "tbSeq";
             this.tbSeq.Size = new System.Drawing.Size(81, 23);
@@ -344,6 +364,24 @@
             this.tbDescricao.Size = new System.Drawing.Size(395, 23);
             this.tbDescricao.TabIndex = 2;
             // 
+            // Salvar
+            // 
+            this.Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Salvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Salvar.FlatAppearance.BorderSize = 0;
+            this.Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Salvar.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
+            this.Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Salvar.Location = new System.Drawing.Point(245, 469);
+            this.Salvar.Name = "Salvar";
+            this.Salvar.Size = new System.Drawing.Size(81, 46);
+            this.Salvar.TabIndex = 14;
+            this.Salvar.Text = "Salvar";
+            this.Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Salvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Salvar.UseVisualStyleBackColor = false;
+            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
+            // 
             // Pesquisar
             // 
             this.Pesquisar.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -352,7 +390,7 @@
             this.Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pesquisar.Image = global::MiniPack.Properties.Resources.icons8_search_24;
             this.Pesquisar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Pesquisar.Location = new System.Drawing.Point(485, 385);
+            this.Pesquisar.Location = new System.Drawing.Point(433, 469);
             this.Pesquisar.Name = "Pesquisar";
             this.Pesquisar.Size = new System.Drawing.Size(81, 46);
             this.Pesquisar.TabIndex = 23;
@@ -362,24 +400,6 @@
             this.Pesquisar.UseVisualStyleBackColor = false;
             this.Pesquisar.Click += new System.EventHandler(this.Pesquisar_Click);
             // 
-            // Limpar
-            // 
-            this.Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Limpar.FlatAppearance.BorderSize = 0;
-            this.Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Limpar.Image = global::MiniPack.Properties.Resources.icons8_clear_formatting_24;
-            this.Limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Limpar.Location = new System.Drawing.Point(201, 385);
-            this.Limpar.Name = "Limpar";
-            this.Limpar.Size = new System.Drawing.Size(81, 46);
-            this.Limpar.TabIndex = 22;
-            this.Limpar.Text = "Limpar";
-            this.Limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Limpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Limpar.UseVisualStyleBackColor = false;
-            this.Limpar.Click += new System.EventHandler(this.Limpar_Click);
-            // 
             // Excluir
             // 
             this.Excluir.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -388,7 +408,7 @@
             this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Excluir.Image = global::MiniPack.Properties.Resources.icons8_cancel_24;
             this.Excluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Excluir.Location = new System.Drawing.Point(386, 385);
+            this.Excluir.Location = new System.Drawing.Point(339, 469);
             this.Excluir.Name = "Excluir";
             this.Excluir.Size = new System.Drawing.Size(81, 46);
             this.Excluir.TabIndex = 21;
@@ -398,23 +418,23 @@
             this.Excluir.UseVisualStyleBackColor = false;
             this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
-            // Salvar
+            // Limpar
             // 
-            this.Salvar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Salvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Salvar.FlatAppearance.BorderSize = 0;
-            this.Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Salvar.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
-            this.Salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Salvar.Location = new System.Drawing.Point(288, 385);
-            this.Salvar.Name = "Salvar";
-            this.Salvar.Size = new System.Drawing.Size(81, 46);
-            this.Salvar.TabIndex = 14;
-            this.Salvar.Text = "Salvar";
-            this.Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Salvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Salvar.UseVisualStyleBackColor = false;
-            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
+            this.Limpar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Limpar.FlatAppearance.BorderSize = 0;
+            this.Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Limpar.Image = global::MiniPack.Properties.Resources.icons8_clear_formatting_24;
+            this.Limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Limpar.Location = new System.Drawing.Point(151, 469);
+            this.Limpar.Name = "Limpar";
+            this.Limpar.Size = new System.Drawing.Size(81, 46);
+            this.Limpar.TabIndex = 22;
+            this.Limpar.Text = "Limpar";
+            this.Limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Limpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Limpar.UseVisualStyleBackColor = false;
+            this.Limpar.Click += new System.EventHandler(this.Limpar_Click);
             // 
             // ribbonUpDown1
             // 
@@ -426,8 +446,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(809, 583);
+            this.ClientSize = new System.Drawing.Size(809, 557);
             this.Controls.Add(this.ab3);
+            this.Controls.Add(this.Excluir);
+            this.Controls.Add(this.Limpar);
+            this.Controls.Add(this.Pesquisar);
+            this.Controls.Add(this.Salvar);
             this.MinimumSize = new System.Drawing.Size(473, 408);
             this.Name = "frmCadastroProduto";
             this.Resizable = false;
@@ -474,6 +498,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private System.Windows.Forms.NumericUpDown tbEsqtoque;
         private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroTextBox Tbcod;
     }
 }
 

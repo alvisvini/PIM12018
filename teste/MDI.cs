@@ -1,4 +1,6 @@
-﻿using MiniPack.Categoria.View;
+﻿using MiniPack;
+using MiniPack.Categoria.View;
+using MiniPack.Venda.View;
 using System;
 using System.Windows.Forms;
 
@@ -9,6 +11,11 @@ namespace teste
         public MDI()
         {
             InitializeComponent();
+        }
+
+        ~MDI()
+        {
+            Banco.Close();
         }
 
         private void btnCadProduto_Click(object sender, EventArgs e)
@@ -37,6 +44,13 @@ namespace teste
             Cadcategoria f2 = new Cadcategoria();
             f2.MdiParent = this;
             f2.Show();
+        }
+
+        private void ribbonButton2_Click(object sender, EventArgs e)
+        {
+            Venda v = new Venda();
+            v.MdiParent = this;
+            v.Show();
         }
     }
 }
