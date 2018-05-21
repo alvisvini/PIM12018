@@ -67,12 +67,8 @@ namespace teste
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbNomeRazao = new MetroFramework.Controls.MetroLabel();
             this.tbDescricao = new MetroFramework.Controls.MetroTextBox();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.tbSenha = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.tbID = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tbNro = new System.Windows.Forms.MaskedTextBox();
             this.tbCep = new System.Windows.Forms.MaskedTextBox();
             this.tbPais = new MetroFramework.Controls.MetroTextBox();
@@ -89,17 +85,21 @@ namespace teste
             this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
             this.tbLogradouro = new MetroFramework.Controls.MetroTextBox();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tbSenha = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.tbID = new MetroFramework.Controls.MetroTextBox();
             this.Pesquisar = new System.Windows.Forms.Button();
             this.Limpar = new System.Windows.Forms.Button();
             this.Excluir = new System.Windows.Forms.Button();
             this.Salvar = new System.Windows.Forms.Button();
             this.ribbonUpDown1 = new System.Windows.Forms.RibbonUpDown();
-            this.button1 = new System.Windows.Forms.Button();
             this.ab3.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.metroTabPage3.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
+            this.metroTabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ab3
@@ -112,9 +112,9 @@ namespace teste
             this.ab3.Controls.Add(this.metroTabPage2);
             this.ab3.Location = new System.Drawing.Point(11, 63);
             this.ab3.Name = "ab3";
-            this.ab3.SelectedIndex = 2;
+            this.ab3.SelectedIndex = 1;
             this.ab3.Size = new System.Drawing.Size(802, 359);
-            this.ab3.TabIndex = 0;
+            this.ab3.TabIndex = 4;
             // 
             // metroTabPage1
             // 
@@ -161,7 +161,7 @@ namespace teste
             this.tbnasc.Mask = "00/00/0000";
             this.tbnasc.Name = "tbnasc";
             this.tbnasc.Size = new System.Drawing.Size(80, 20);
-            this.tbnasc.TabIndex = 48;
+            this.tbnasc.TabIndex = 6;
             // 
             // tbrecado
             // 
@@ -169,7 +169,7 @@ namespace teste
             this.tbrecado.Mask = "(00) 00000-0000";
             this.tbrecado.Name = "tbrecado";
             this.tbrecado.Size = new System.Drawing.Size(104, 20);
-            this.tbrecado.TabIndex = 47;
+            this.tbrecado.TabIndex = 7;
             // 
             // TBtelfixo
             // 
@@ -177,7 +177,7 @@ namespace teste
             this.TBtelfixo.Mask = "(00) 00000-0000";
             this.TBtelfixo.Name = "TBtelfixo";
             this.TBtelfixo.Size = new System.Drawing.Size(104, 20);
-            this.TBtelfixo.TabIndex = 46;
+            this.TBtelfixo.TabIndex = 5;
             // 
             // tbcel
             // 
@@ -185,7 +185,7 @@ namespace teste
             this.tbcel.Mask = "(00) 00000-0000";
             this.tbcel.Name = "tbcel";
             this.tbcel.Size = new System.Drawing.Size(104, 20);
-            this.tbcel.TabIndex = 45;
+            this.tbcel.TabIndex = 3;
             // 
             // tbcpf
             // 
@@ -193,7 +193,7 @@ namespace teste
             this.tbcpf.Mask = "000.000.000-00";
             this.tbcpf.Name = "tbcpf";
             this.tbcpf.Size = new System.Drawing.Size(104, 20);
-            this.tbcpf.TabIndex = 44;
+            this.tbcpf.TabIndex = 2;
             // 
             // cbTipoPessoa
             // 
@@ -207,7 +207,7 @@ namespace teste
             this.cbTipoPessoa.Location = new System.Drawing.Point(310, 40);
             this.cbTipoPessoa.Name = "cbTipoPessoa";
             this.cbTipoPessoa.Size = new System.Drawing.Size(157, 21);
-            this.cbTipoPessoa.TabIndex = 43;
+            this.cbTipoPessoa.TabIndex = 0;
             this.cbTipoPessoa.SelectedIndexChanged += new System.EventHandler(this.cbTipoPessoa_SelectedIndexChanged);
             // 
             // metroLabel12
@@ -235,7 +235,7 @@ namespace teste
             this.cmbEstCivil.Location = new System.Drawing.Point(310, 240);
             this.cmbEstCivil.Name = "cmbEstCivil";
             this.cmbEstCivil.Size = new System.Drawing.Size(157, 21);
-            this.cmbEstCivil.TabIndex = 41;
+            this.cmbEstCivil.TabIndex = 9;
             // 
             // metroLabel11
             // 
@@ -261,7 +261,7 @@ namespace teste
             this.cmbSexo.Location = new System.Drawing.Point(99, 242);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(115, 21);
-            this.cmbSexo.TabIndex = 39;
+            this.cmbSexo.TabIndex = 8;
             // 
             // metroLabel10
             // 
@@ -282,7 +282,7 @@ namespace teste
             this.tbEmail.MaxLength = 250;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(368, 23);
-            this.tbEmail.TabIndex = 37;
+            this.tbEmail.TabIndex = 10;
             // 
             // metroLabel9
             // 
@@ -369,7 +369,7 @@ namespace teste
             this.tbRg.MaxLength = 250;
             this.tbRg.Name = "tbRg";
             this.tbRg.Size = new System.Drawing.Size(104, 23);
-            this.tbRg.TabIndex = 25;
+            this.tbRg.TabIndex = 4;
             // 
             // metroLabel8
             // 
@@ -443,66 +443,7 @@ namespace teste
             this.tbDescricao.MaxLength = 250;
             this.tbDescricao.Name = "tbDescricao";
             this.tbDescricao.Size = new System.Drawing.Size(368, 23);
-            this.tbDescricao.TabIndex = 2;
-            // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage3.Controls.Add(this.metroLabel14);
-            this.metroTabPage3.Controls.Add(this.tbSenha);
-            this.metroTabPage3.Controls.Add(this.metroLabel13);
-            this.metroTabPage3.Controls.Add(this.tbID);
-            this.metroTabPage3.CustomBackground = true;
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(794, 320);
-            this.metroTabPage3.TabIndex = 3;
-            this.metroTabPage3.Text = "Acesso";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel14.CustomBackground = true;
-            this.metroLabel14.Location = new System.Drawing.Point(109, 93);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel14.TabIndex = 7;
-            this.metroLabel14.Text = "Senha";
-            // 
-            // tbSenha
-            // 
-            this.tbSenha.BackColor = System.Drawing.Color.White;
-            this.tbSenha.CustomBackground = true;
-            this.tbSenha.Location = new System.Drawing.Point(185, 93);
-            this.tbSenha.MaxLength = 15;
-            this.tbSenha.Name = "tbSenha";
-            this.tbSenha.PasswordChar = '*';
-            this.tbSenha.Size = new System.Drawing.Size(148, 23);
-            this.tbSenha.TabIndex = 6;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel13.CustomBackground = true;
-            this.metroLabel13.Location = new System.Drawing.Point(109, 64);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel13.TabIndex = 5;
-            this.metroLabel13.Text = "ID";
-            // 
-            // tbID
-            // 
-            this.tbID.BackColor = System.Drawing.Color.White;
-            this.tbID.CustomBackground = true;
-            this.tbID.Location = new System.Drawing.Point(185, 64);
-            this.tbID.MaxLength = 15;
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(148, 23);
-            this.tbID.TabIndex = 4;
+            this.tbDescricao.TabIndex = 1;
             // 
             // metroTabPage2
             // 
@@ -533,6 +474,23 @@ namespace teste
             this.metroTabPage2.Text = "Endereco";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::MiniPack.Properties.Resources.icons8_search_24;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(204, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 26);
+            this.button1.TabIndex = 24;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tbNro
             // 
             this.tbNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -540,7 +498,7 @@ namespace teste
             this.tbNro.Mask = "00000";
             this.tbNro.Name = "tbNro";
             this.tbNro.Size = new System.Drawing.Size(66, 22);
-            this.tbNro.TabIndex = 39;
+            this.tbNro.TabIndex = 1;
             // 
             // tbCep
             // 
@@ -549,7 +507,7 @@ namespace teste
             this.tbCep.Mask = "00000-999";
             this.tbCep.Name = "tbCep";
             this.tbCep.Size = new System.Drawing.Size(100, 22);
-            this.tbCep.TabIndex = 38;
+            this.tbCep.TabIndex = 0;
             // 
             // tbPais
             // 
@@ -559,7 +517,7 @@ namespace teste
             this.tbPais.MaxLength = 250;
             this.tbPais.Name = "tbPais";
             this.tbPais.Size = new System.Drawing.Size(368, 23);
-            this.tbPais.TabIndex = 37;
+            this.tbPais.TabIndex = 3;
             // 
             // metroLabel19
             // 
@@ -655,7 +613,7 @@ namespace teste
             this.tbComplemento.MaxLength = 250;
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(368, 23);
-            this.tbComplemento.TabIndex = 25;
+            this.tbComplemento.TabIndex = 2;
             // 
             // tbBairro
             // 
@@ -699,6 +657,65 @@ namespace teste
             this.tbLogradouro.Size = new System.Drawing.Size(368, 23);
             this.tbLogradouro.TabIndex = 2;
             // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage3.Controls.Add(this.metroLabel14);
+            this.metroTabPage3.Controls.Add(this.tbSenha);
+            this.metroTabPage3.Controls.Add(this.metroLabel13);
+            this.metroTabPage3.Controls.Add(this.tbID);
+            this.metroTabPage3.CustomBackground = true;
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(794, 320);
+            this.metroTabPage3.TabIndex = 3;
+            this.metroTabPage3.Text = "Acesso";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel14.CustomBackground = true;
+            this.metroLabel14.Location = new System.Drawing.Point(109, 93);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel14.TabIndex = 7;
+            this.metroLabel14.Text = "Senha";
+            // 
+            // tbSenha
+            // 
+            this.tbSenha.BackColor = System.Drawing.Color.White;
+            this.tbSenha.CustomBackground = true;
+            this.tbSenha.Location = new System.Drawing.Point(185, 93);
+            this.tbSenha.MaxLength = 15;
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
+            this.tbSenha.Size = new System.Drawing.Size(148, 23);
+            this.tbSenha.TabIndex = 6;
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel13.CustomBackground = true;
+            this.metroLabel13.Location = new System.Drawing.Point(109, 64);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(21, 19);
+            this.metroLabel13.TabIndex = 5;
+            this.metroLabel13.Text = "ID";
+            // 
+            // tbID
+            // 
+            this.tbID.BackColor = System.Drawing.Color.White;
+            this.tbID.CustomBackground = true;
+            this.tbID.Location = new System.Drawing.Point(185, 64);
+            this.tbID.MaxLength = 15;
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(148, 23);
+            this.tbID.TabIndex = 4;
+            // 
             // Pesquisar
             // 
             this.Pesquisar.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -710,7 +727,7 @@ namespace teste
             this.Pesquisar.Location = new System.Drawing.Point(401, 456);
             this.Pesquisar.Name = "Pesquisar";
             this.Pesquisar.Size = new System.Drawing.Size(81, 46);
-            this.Pesquisar.TabIndex = 23;
+            this.Pesquisar.TabIndex = 3;
             this.Pesquisar.Text = "Pesquisar";
             this.Pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Pesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -728,7 +745,7 @@ namespace teste
             this.Limpar.Location = new System.Drawing.Point(140, 456);
             this.Limpar.Name = "Limpar";
             this.Limpar.Size = new System.Drawing.Size(81, 46);
-            this.Limpar.TabIndex = 22;
+            this.Limpar.TabIndex = 1;
             this.Limpar.Text = "Limpar";
             this.Limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Limpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -746,7 +763,7 @@ namespace teste
             this.Excluir.Location = new System.Drawing.Point(314, 456);
             this.Excluir.Name = "Excluir";
             this.Excluir.Size = new System.Drawing.Size(81, 46);
-            this.Excluir.TabIndex = 21;
+            this.Excluir.TabIndex = 2;
             this.Excluir.Text = "Excluir";
             this.Excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Excluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -764,7 +781,7 @@ namespace teste
             this.Salvar.Location = new System.Drawing.Point(227, 456);
             this.Salvar.Name = "Salvar";
             this.Salvar.Size = new System.Drawing.Size(81, 46);
-            this.Salvar.TabIndex = 14;
+            this.Salvar.TabIndex = 0;
             this.Salvar.Text = "Salvar";
             this.Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Salvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -775,22 +792,6 @@ namespace teste
             // 
             this.ribbonUpDown1.TextBoxText = "";
             this.ribbonUpDown1.TextBoxWidth = 50;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::MiniPack.Properties.Resources.icons8_search_24;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(204, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 26);
-            this.button1.TabIndex = 24;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmCadastroCliente
             // 
@@ -812,10 +813,10 @@ namespace teste
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.metroTabPage3.ResumeLayout(false);
-            this.metroTabPage3.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
+            this.metroTabPage3.ResumeLayout(false);
+            this.metroTabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }

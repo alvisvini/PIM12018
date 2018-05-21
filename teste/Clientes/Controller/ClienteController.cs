@@ -195,7 +195,7 @@ namespace MiniPack.Clientes.control
             DataTable dt = new DataTable();
             try
             {
-                string strSQL = "Select nomerazao from ge_cliente";
+                string strSQL = "SELECT a.seq, a.nomerazao, a.cpf, a.telCelular, a.telFixo, a.email, a.tipopessoa FROM pim1.ge_cliente a";
                 if (where != "")
                     strSQL += " where nomerazao like'%" + where + "%'";
                 Banco.Open();

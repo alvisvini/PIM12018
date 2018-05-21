@@ -60,6 +60,9 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BuscaCEP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BuscaCEP.1.0.0\lib\net40\BuscaCEP.dll</HintPath>
+    </Reference>
     <Reference Include="Correios.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Correios.CEP.Net.1.1.6\lib\Correios.Net.dll</HintPath>
     </Reference>
@@ -128,6 +131,12 @@
     <Compile Include="Clientes\View\frmCadastroCliente.Designer.cs">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes\View\frmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\View\frmConsultaCliente.Designer.cs">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\View\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +175,12 @@
     <Compile Include="Venda\Controller\VendaController.cs" />
     <Compile Include="Venda\Model\Venda.cs" />
     <Compile Include="Venda\Model\VendaItem.cs" />
+    <Compile Include="Venda\View\frmConsultaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venda\View\frmConsultaVenda.Designer.cs">
+      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Venda\View\Venda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\View\frmCadastroCliente.resx">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\View\frmConsultaCliente.resx">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\View\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
@@ -203,6 +221,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Venda\View\frmConsultaVenda.resx">
+      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Venda\View\Venda.resx">
       <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>

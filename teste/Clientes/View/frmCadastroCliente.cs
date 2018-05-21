@@ -138,7 +138,6 @@ namespace teste
             cbTipoPessoa.Text = p.Tipopessoa;
             tbID.Text = p.Id;
             tbSenha.Text = p.Senha;
-            tbNomeRazao.Text = p.NomeRazao;
             tbcpf.Text = p.Cpf;
             tbRg.Text = p.Rg;
             tbnasc.Text = p.DtaNasc;
@@ -171,8 +170,58 @@ namespace teste
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tbCep.Text))
+
+            {
+
+                MessageBox.Show("O CEP inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                return;
+
+            }
+
+            try
+
+            {
+
+                CEP cep = new CEP(tbCep.Text.ToString().Replace("-", ""));
 
 
 
+                if (cep != null)
+
+                {
+
+                    tbUf.Text = cep.uf;
+
+                    tbCidade.Text = cep.localidade;
+
+                    tbBairro.Text = cep.bairro;
+
+                    tbLogradouro.Text = cep.logradouro;
+
+                }
+
+                else
+
+                {
+
+                    MessageBox.Show("O CEP informado não foi encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    tbCep.Text = string.Empty;
+
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+
+                MessageBox.Show("O CEP informado não foi encontrado.\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+        }
     }
     }

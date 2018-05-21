@@ -31,3 +31,6 @@ C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Login.View.TelaLogin
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Promocao.View.Promocao.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Correios.Net.dll
 C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Correios.Net.pdb
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Clientes.View.frmConsultaCliente.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Venda.View.frmConsultaVenda.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\BuscaCEP.dll

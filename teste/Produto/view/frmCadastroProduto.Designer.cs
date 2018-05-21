@@ -130,7 +130,7 @@
             this.Tbcod.MaxLength = 15;
             this.Tbcod.Name = "Tbcod";
             this.Tbcod.Size = new System.Drawing.Size(181, 23);
-            this.Tbcod.TabIndex = 29;
+            this.Tbcod.TabIndex = 0;
             // 
             // label2
             // 
@@ -152,7 +152,7 @@
             0});
             this.tbEsqtoque.Name = "tbEsqtoque";
             this.tbEsqtoque.Size = new System.Drawing.Size(81, 22);
-            this.tbEsqtoque.TabIndex = 27;
+            this.tbEsqtoque.TabIndex = 7;
             this.tbEsqtoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // metroLabel9
@@ -172,7 +172,7 @@
             this.label1.Location = new System.Drawing.Point(98, 256);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 25;
+            this.label1.TabIndex = 5;
             this.label1.Text = "R$";
             // 
             // categoria
@@ -184,7 +184,7 @@
             this.categoria.Location = new System.Drawing.Point(99, 159);
             this.categoria.Name = "categoria";
             this.categoria.Size = new System.Drawing.Size(395, 21);
-            this.categoria.TabIndex = 24;
+            this.categoria.TabIndex = 3;
             // 
             // metroLabel8
             // 
@@ -225,7 +225,7 @@
             this.tbObs.Location = new System.Drawing.Point(99, 203);
             this.tbObs.Name = "tbObs";
             this.tbObs.Size = new System.Drawing.Size(395, 23);
-            this.tbObs.TabIndex = 17;
+            this.tbObs.TabIndex = 4;
             // 
             // metroLabel6
             // 
@@ -235,7 +235,7 @@
             this.metroLabel6.Location = new System.Drawing.Point(298, 258);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel6.TabIndex = 16;
+            this.metroLabel6.TabIndex = 7;
             this.metroLabel6.Text = "Tamanho";
             // 
             // tbPreco
@@ -250,7 +250,7 @@
             0});
             this.tbPreco.Name = "tbPreco";
             this.tbPreco.Size = new System.Drawing.Size(81, 22);
-            this.tbPreco.TabIndex = 15;
+            this.tbPreco.TabIndex = 5;
             this.tbPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // metroLabel5
@@ -274,7 +274,7 @@
             0});
             this.tbTamanho.Name = "tbTamanho";
             this.tbTamanho.Size = new System.Drawing.Size(81, 22);
-            this.tbTamanho.TabIndex = 12;
+            this.tbTamanho.TabIndex = 6;
             this.tbTamanho.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // metroLabel3
@@ -318,14 +318,14 @@
             this.tbMarca.MaxLength = 250;
             this.tbMarca.Name = "tbMarca";
             this.tbMarca.Size = new System.Drawing.Size(395, 23);
-            this.tbMarca.TabIndex = 6;
+            this.tbMarca.TabIndex = 2;
             // 
             // metroButton1
             // 
             this.metroButton1.Location = new System.Drawing.Point(521, 282);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(126, 31);
-            this.metroButton1.TabIndex = 5;
+            this.metroButton1.TabIndex = 8;
             this.metroButton1.Text = "Carregar Imagem";
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
@@ -362,7 +362,7 @@
             this.tbDescricao.MaxLength = 250;
             this.tbDescricao.Name = "tbDescricao";
             this.tbDescricao.Size = new System.Drawing.Size(395, 23);
-            this.tbDescricao.TabIndex = 2;
+            this.tbDescricao.TabIndex = 1;
             // 
             // Salvar
             // 
@@ -375,7 +375,7 @@
             this.Salvar.Location = new System.Drawing.Point(245, 469);
             this.Salvar.Name = "Salvar";
             this.Salvar.Size = new System.Drawing.Size(81, 46);
-            this.Salvar.TabIndex = 14;
+            this.Salvar.TabIndex = 1;
             this.Salvar.Text = "Salvar";
             this.Salvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Salvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -393,7 +393,7 @@
             this.Pesquisar.Location = new System.Drawing.Point(433, 469);
             this.Pesquisar.Name = "Pesquisar";
             this.Pesquisar.Size = new System.Drawing.Size(81, 46);
-            this.Pesquisar.TabIndex = 23;
+            this.Pesquisar.TabIndex = 3;
             this.Pesquisar.Text = "Pesquisar";
             this.Pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Pesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -411,7 +411,7 @@
             this.Excluir.Location = new System.Drawing.Point(339, 469);
             this.Excluir.Name = "Excluir";
             this.Excluir.Size = new System.Drawing.Size(81, 46);
-            this.Excluir.TabIndex = 21;
+            this.Excluir.TabIndex = 2;
             this.Excluir.Text = "Excluir";
             this.Excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Excluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -429,7 +429,7 @@
             this.Limpar.Location = new System.Drawing.Point(151, 469);
             this.Limpar.Name = "Limpar";
             this.Limpar.Size = new System.Drawing.Size(81, 46);
-            this.Limpar.TabIndex = 22;
+            this.Limpar.TabIndex = 0;
             this.Limpar.Text = "Limpar";
             this.Limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Limpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;

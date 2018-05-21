@@ -1,5 +1,6 @@
 ﻿using MiniPack;
 using MiniPack.Categoria.View;
+using MiniPack.Clientes.View;
 using MiniPack.Venda.View;
 using System;
 using System.Windows.Forms;
@@ -51,6 +52,13 @@ namespace teste
             Venda v = new Venda();
             v.MdiParent = this;
             v.Show();
+        }
+
+        private void btnConsCliente_Click(object sender, EventArgs e)
+        {
+            frmConsultaCliente f2 = new frmConsultaCliente ();
+            f2.MdiParent = this;
+            f2.Show();
         }
     }
 }

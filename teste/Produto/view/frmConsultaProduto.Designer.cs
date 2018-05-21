@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Pesquisar = new System.Windows.Forms.Button();
-            this.SEQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRICAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SEQCATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,18 +53,23 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SEQ,
+            this.codigo,
             this.DESCRICAO,
             this.MARCA,
-            this.SEQCATEGORIA});
+            this.SEQCATEGORIA,
+            this.Categoria,
+            this.Preco,
+            this.Tamanho,
+            this.Quantidade});
             this.dataGridView1.Location = new System.Drawing.Point(23, 118);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(768, 343);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox1
             // 
@@ -70,11 +81,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 82);
+            this.label1.Location = new System.Drawing.Point(33, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Descricao";
+            this.label1.Text = "Nome";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Pesquisar
             // 
@@ -94,12 +106,12 @@
             this.Pesquisar.UseVisualStyleBackColor = false;
             this.Pesquisar.Click += new System.EventHandler(this.Pesquisar_Click);
             // 
-            // SEQ
+            // codigo
             // 
-            this.SEQ.DataPropertyName = "SEQ";
-            this.SEQ.HeaderText = "Seq";
-            this.SEQ.Name = "SEQ";
-            this.SEQ.ReadOnly = true;
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Cod.";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
             // 
             // DESCRICAO
             // 
@@ -120,10 +132,47 @@
             // 
             // SEQCATEGORIA
             // 
+            this.SEQCATEGORIA.DataPropertyName = "SEQCATEGORIA";
             this.SEQCATEGORIA.HeaderText = "Categoria";
             this.SEQCATEGORIA.Name = "SEQCATEGORIA";
             this.SEQCATEGORIA.ReadOnly = true;
             this.SEQCATEGORIA.Visible = false;
+            // 
+            // Categoria
+            // 
+            this.Categoria.DataPropertyName = "Categoria";
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // Preco
+            // 
+            this.Preco.DataPropertyName = "Preco";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Preco.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Preco.HeaderText = "Preço";
+            this.Preco.Name = "Preco";
+            this.Preco.ReadOnly = true;
+            // 
+            // Tamanho
+            // 
+            this.Tamanho.DataPropertyName = "Tamanho";
+            this.Tamanho.HeaderText = "Tamanho";
+            this.Tamanho.Name = "Tamanho";
+            this.Tamanho.ReadOnly = true;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.DataPropertyName = "Quantidade";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Quantidade.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.ReadOnly = true;
             // 
             // frmConsultaProduto
             // 
@@ -150,10 +199,14 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Pesquisar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SEQ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRICAO;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
         private System.Windows.Forms.DataGridViewTextBoxColumn SEQCATEGORIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Preco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tamanho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
     }
 }
 

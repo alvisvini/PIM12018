@@ -128,9 +128,10 @@ namespace MiniPack.Produto.control
             DataTable dt = new DataTable();
             try
             {
-                string strSQL = "Select seq,descricao,marca,seqcategoria from ge_produto";
+                string strSQL = "Select a.cod as codigo, a.descricao, a.marca, b.seq as seqcategoria, b.descricao as CATEGORIA, a.preco, a.tamanho, a.quantidade " +
+                    "from pim1.ge_produto a, pim1.ge_categoria b where a.seqcategoria = b.seq";
                 if (where != "")
-                    strSQL += " where descricao like'%" + where + "%'";
+                    strSQL += " and descricao like'%" + where + "%'";
                 Banco.Open();
                 MySqlCommand comando = new MySqlCommand(strSQL, Banco.connection);
                 MySqlDataAdapter da = new MySqlDataAdapter(comando);
