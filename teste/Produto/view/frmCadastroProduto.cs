@@ -31,7 +31,7 @@ namespace teste
 
         private void Salvar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(tbDescricao.Text) && (!string.IsNullOrEmpty(tbMarca.Text)) && categoria.SelectedIndex >= 0)
+            if (!string.IsNullOrEmpty(tbDescricao.Text) && (!string.IsNullOrEmpty(tbMarca.Text) && (!string.IsNullOrEmpty(tbCodigo.Text))) && categoria.SelectedIndex >= 0)
             {
                 Produto p = new Produto();
                 if (!string.IsNullOrEmpty(tbSeq.Text))
@@ -44,7 +44,7 @@ namespace teste
                 p.Tamanho = Convert.ToInt32(tbTamanho.Value);
                 p.Imagem = urlImagem;
                 p.Quantidade = Convert.ToInt16(tbEsqtoque.Value);
-                p.Cod = Tbcod.Text;                
+                p.Cod = tbCodigo.Text;                
 
                 ProdutoController control = new ProdutoController();
 
@@ -67,7 +67,7 @@ namespace teste
             }
             else
             {
-                MessageBox.Show("Dados incompletos. Verifique os campos:\n\n - Descricao\n - Marca\n - Categoria", "ATENCAO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Dados incompletos. Verifique os campos:\n\n - Descricao\n - Marca\n - Codigo\n - Categoria", "ATENCAO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.ActiveControl = tbDescricao;
                 tbDescricao.Focus();
             }
@@ -110,11 +110,11 @@ namespace teste
             categoria.SelectedIndex = -1;
             tbPreco.Value = 0;
             tbTamanho.Value = 0;
-            Tbcod.Text = "";
+            tbCodigo.Text = "";
             pbImagem.Image = MiniPack.Properties.Resources.unavailable;
             urlImagem = Directory.GetCurrentDirectory() + "\\unavailable.png";
             tbEsqtoque.Value = 0;
-            Tbcod.Text = "";
+            tbCodigo.Text = "";
             carregado = false;
             categoria.DisplayMember = "DESCRICAO";
             categoria.ValueMember = "SEQ";
@@ -127,7 +127,7 @@ namespace teste
 
         private void Pesquisar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Tbcod.Text))
+            if (string.IsNullOrEmpty(tbCodigo.Text))
             {
                 MessageBox.Show("Informe o Codigo", "Atencao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -135,7 +135,7 @@ namespace teste
 
             Produto p = new Produto();
             ProdutoController control = new ProdutoController();
-            p = control.Pesquisar(Tbcod.Text);
+            p = control.Pesquisar(tbCodigo.Text);
             if(p == null)
             {
                 MessageBox.Show("Produto nao encontrado!", "Atencao", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -151,8 +151,10 @@ namespace teste
             pbImagem.Image = MiniPack.Properties.Resources.unavailable;
             pbImagem.ImageLocation = p.Imagem;
             tbEsqtoque.Value = p.Quantidade;
-            Tbcod.Text = p.Cod;
+            tbCodigo.Text = p.Cod;
             carregado = true;
         }
+
+     }
     }
-}
+

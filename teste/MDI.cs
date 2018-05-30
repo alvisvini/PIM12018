@@ -60,5 +60,12 @@ namespace teste
             f2.MdiParent = this;
             f2.Show();
         }
+
+        private void ribbonButton6_Click(object sender, EventArgs e)
+        {
+            frmConsultaVenda f2 = new frmConsultaVenda();
+            f2.MdiParent = this;
+            f2.Show();
+        }
     }
 }

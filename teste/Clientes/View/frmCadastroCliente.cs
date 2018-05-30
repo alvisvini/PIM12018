@@ -27,7 +27,7 @@ namespace teste
 
         private void Salvar_Click(object sender, EventArgs e)
         {
-            Cliente p = new Cliente();
+            Cliente p = new Cliente();            
             p.NomeRazao = tbDescricao.Text.ToUpper();
             p.Tipopessoa = cbTipoPessoa.Text;
             p.Cpf = tbcpf.Text.Replace(",","").Replace("-","");
@@ -60,6 +60,7 @@ namespace teste
                 }
             }else
             {
+                p.Seq = Convert.ToInt16(tbSeq.Text);
                 if (control.Update(p))
                 {
                     MessageBox.Show("Atualizado com Sucesso", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);

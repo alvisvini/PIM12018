@@ -67,6 +67,11 @@ namespace teste
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbNomeRazao = new MetroFramework.Controls.MetroLabel();
             this.tbDescricao = new MetroFramework.Controls.MetroTextBox();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tbSenha = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.tbID = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.tbNro = new System.Windows.Forms.MaskedTextBox();
@@ -85,11 +90,6 @@ namespace teste
             this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
             this.tbLogradouro = new MetroFramework.Controls.MetroTextBox();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.tbSenha = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.tbID = new MetroFramework.Controls.MetroTextBox();
             this.Pesquisar = new System.Windows.Forms.Button();
             this.Limpar = new System.Windows.Forms.Button();
             this.Excluir = new System.Windows.Forms.Button();
@@ -98,8 +98,8 @@ namespace teste
             this.ab3.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ab3
@@ -112,7 +112,7 @@ namespace teste
             this.ab3.Controls.Add(this.metroTabPage2);
             this.ab3.Location = new System.Drawing.Point(11, 63);
             this.ab3.Name = "ab3";
-            this.ab3.SelectedIndex = 1;
+            this.ab3.SelectedIndex = 2;
             this.ab3.Size = new System.Drawing.Size(802, 359);
             this.ab3.TabIndex = 4;
             // 
@@ -445,6 +445,65 @@ namespace teste
             this.tbDescricao.Size = new System.Drawing.Size(368, 23);
             this.tbDescricao.TabIndex = 1;
             // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroTabPage3.Controls.Add(this.metroLabel14);
+            this.metroTabPage3.Controls.Add(this.tbSenha);
+            this.metroTabPage3.Controls.Add(this.metroLabel13);
+            this.metroTabPage3.Controls.Add(this.tbID);
+            this.metroTabPage3.CustomBackground = true;
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(794, 320);
+            this.metroTabPage3.TabIndex = 3;
+            this.metroTabPage3.Text = "Acesso";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel14.CustomBackground = true;
+            this.metroLabel14.Location = new System.Drawing.Point(109, 93);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel14.TabIndex = 7;
+            this.metroLabel14.Text = "Senha";
+            // 
+            // tbSenha
+            // 
+            this.tbSenha.BackColor = System.Drawing.Color.White;
+            this.tbSenha.CustomBackground = true;
+            this.tbSenha.Location = new System.Drawing.Point(185, 93);
+            this.tbSenha.MaxLength = 15;
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
+            this.tbSenha.Size = new System.Drawing.Size(148, 23);
+            this.tbSenha.TabIndex = 6;
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel13.CustomBackground = true;
+            this.metroLabel13.Location = new System.Drawing.Point(109, 64);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(21, 19);
+            this.metroLabel13.TabIndex = 5;
+            this.metroLabel13.Text = "ID";
+            // 
+            // tbID
+            // 
+            this.tbID.BackColor = System.Drawing.Color.White;
+            this.tbID.CustomBackground = true;
+            this.tbID.Location = new System.Drawing.Point(185, 64);
+            this.tbID.MaxLength = 15;
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(148, 23);
+            this.tbID.TabIndex = 4;
+            // 
             // metroTabPage2
             // 
             this.metroTabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -493,6 +552,7 @@ namespace teste
             // 
             // tbNro
             // 
+            this.tbNro.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.tbNro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNro.Location = new System.Drawing.Point(523, 82);
             this.tbNro.Mask = "00000";
@@ -657,65 +717,6 @@ namespace teste
             this.tbLogradouro.Size = new System.Drawing.Size(368, 23);
             this.tbLogradouro.TabIndex = 2;
             // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroTabPage3.Controls.Add(this.metroLabel14);
-            this.metroTabPage3.Controls.Add(this.tbSenha);
-            this.metroTabPage3.Controls.Add(this.metroLabel13);
-            this.metroTabPage3.Controls.Add(this.tbID);
-            this.metroTabPage3.CustomBackground = true;
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(794, 320);
-            this.metroTabPage3.TabIndex = 3;
-            this.metroTabPage3.Text = "Acesso";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel14.CustomBackground = true;
-            this.metroLabel14.Location = new System.Drawing.Point(109, 93);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel14.TabIndex = 7;
-            this.metroLabel14.Text = "Senha";
-            // 
-            // tbSenha
-            // 
-            this.tbSenha.BackColor = System.Drawing.Color.White;
-            this.tbSenha.CustomBackground = true;
-            this.tbSenha.Location = new System.Drawing.Point(185, 93);
-            this.tbSenha.MaxLength = 15;
-            this.tbSenha.Name = "tbSenha";
-            this.tbSenha.PasswordChar = '*';
-            this.tbSenha.Size = new System.Drawing.Size(148, 23);
-            this.tbSenha.TabIndex = 6;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel13.CustomBackground = true;
-            this.metroLabel13.Location = new System.Drawing.Point(109, 64);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(21, 19);
-            this.metroLabel13.TabIndex = 5;
-            this.metroLabel13.Text = "ID";
-            // 
-            // tbID
-            // 
-            this.tbID.BackColor = System.Drawing.Color.White;
-            this.tbID.CustomBackground = true;
-            this.tbID.Location = new System.Drawing.Point(185, 64);
-            this.tbID.MaxLength = 15;
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(148, 23);
-            this.tbID.TabIndex = 4;
-            // 
             // Pesquisar
             // 
             this.Pesquisar.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -813,10 +814,10 @@ namespace teste
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.metroTabPage2.ResumeLayout(false);
-            this.metroTabPage2.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage3.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }

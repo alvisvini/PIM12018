@@ -31,13 +31,12 @@
             this.ab3 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.Tbcod = new MetroFramework.Controls.MetroTextBox();
+            this.tbCodigo = new MetroFramework.Controls.MetroTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbEsqtoque = new System.Windows.Forms.NumericUpDown();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.categoria = new System.Windows.Forms.ComboBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.tbSeq = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.tbObs = new MetroFramework.Controls.MetroTextBox();
@@ -79,14 +78,12 @@
             // 
             this.metroTabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroTabPage1.Controls.Add(this.metroLabel10);
-            this.metroTabPage1.Controls.Add(this.Tbcod);
+            this.metroTabPage1.Controls.Add(this.tbCodigo);
             this.metroTabPage1.Controls.Add(this.label2);
             this.metroTabPage1.Controls.Add(this.tbEsqtoque);
             this.metroTabPage1.Controls.Add(this.metroLabel9);
             this.metroTabPage1.Controls.Add(this.label1);
             this.metroTabPage1.Controls.Add(this.categoria);
-            this.metroTabPage1.Controls.Add(this.metroLabel8);
-            this.metroTabPage1.Controls.Add(this.tbSeq);
             this.metroTabPage1.Controls.Add(this.metroLabel7);
             this.metroTabPage1.Controls.Add(this.tbObs);
             this.metroTabPage1.Controls.Add(this.metroLabel6);
@@ -115,22 +112,22 @@
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel10.CustomBackground = true;
-            this.metroLabel10.Location = new System.Drawing.Point(232, 42);
+            this.metroLabel10.Location = new System.Drawing.Point(12, 42);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(75, 19);
             this.metroLabel10.TabIndex = 30;
             this.metroLabel10.Text = "Cod Barras";
             // 
-            // Tbcod
+            // tbCodigo
             // 
-            this.Tbcod.BackColor = System.Drawing.Color.White;
-            this.Tbcod.CustomBackground = true;
-            this.Tbcod.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.Tbcod.Location = new System.Drawing.Point(313, 40);
-            this.Tbcod.MaxLength = 15;
-            this.Tbcod.Name = "Tbcod";
-            this.Tbcod.Size = new System.Drawing.Size(181, 23);
-            this.Tbcod.TabIndex = 0;
+            this.tbCodigo.BackColor = System.Drawing.Color.White;
+            this.tbCodigo.CustomBackground = true;
+            this.tbCodigo.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.tbCodigo.Location = new System.Drawing.Point(99, 40);
+            this.tbCodigo.MaxLength = 15;
+            this.tbCodigo.Name = "tbCodigo";
+            this.tbCodigo.Size = new System.Drawing.Size(181, 23);
+            this.tbCodigo.TabIndex = 0;
             // 
             // label2
             // 
@@ -186,26 +183,16 @@
             this.categoria.Size = new System.Drawing.Size(395, 21);
             this.categoria.TabIndex = 3;
             // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel8.CustomBackground = true;
-            this.metroLabel8.Location = new System.Drawing.Point(12, 40);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(31, 19);
-            this.metroLabel8.TabIndex = 20;
-            this.metroLabel8.Text = "Seq";
-            // 
             // tbSeq
             // 
             this.tbSeq.BackColor = System.Drawing.Color.White;
             this.tbSeq.CustomBackground = true;
             this.tbSeq.Enabled = false;
-            this.tbSeq.Location = new System.Drawing.Point(99, 40);
+            this.tbSeq.Location = new System.Drawing.Point(701, 34);
             this.tbSeq.Name = "tbSeq";
             this.tbSeq.Size = new System.Drawing.Size(81, 23);
             this.tbSeq.TabIndex = 19;
+            this.tbSeq.Visible = false;
             // 
             // metroLabel7
             // 
@@ -452,6 +439,7 @@
             this.Controls.Add(this.Limpar);
             this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.Salvar);
+            this.Controls.Add(this.tbSeq);
             this.MinimumSize = new System.Drawing.Size(473, 408);
             this.Name = "frmCadastroProduto";
             this.Resizable = false;
@@ -488,7 +476,6 @@
         private System.Windows.Forms.NumericUpDown tbPreco;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroTextBox tbObs;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox tbSeq;
         private System.Windows.Forms.Button Excluir;
         private System.Windows.Forms.Button Limpar;
@@ -499,7 +486,7 @@
         private System.Windows.Forms.NumericUpDown tbEsqtoque;
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroTextBox Tbcod;
+        private MetroFramework.Controls.MetroTextBox tbCodigo;
     }
 }
 

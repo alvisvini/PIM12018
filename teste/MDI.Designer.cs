@@ -45,6 +45,7 @@ namespace teste
             this.ribTabVenda = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
             this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.ribTabJanela = new System.Windows.Forms.RibbonTab();
@@ -53,7 +54,6 @@ namespace teste
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbonHost1
@@ -145,6 +145,13 @@ namespace teste
             this.ribbonButton2.Text = "Venda";
             this.ribbonButton2.Click += new System.EventHandler(this.ribbonButton2_Click);
             // 
+            // ribbonButton6
+            // 
+            this.ribbonButton6.Image = global::MiniPack.Properties.Resources.icons8_search_24;
+            this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
+            this.ribbonButton6.Text = "Consulta";
+            this.ribbonButton6.Click += new System.EventHandler(this.ribbonButton6_Click);
+            // 
             // ribbonButton1
             // 
             this.ribbonButton1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.Image")));
@@ -169,7 +176,7 @@ namespace teste
             this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2013;
             this.ribbon1.OrbVisible = false;
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(720, 95);
+            this.ribbon1.Size = new System.Drawing.Size(720, 97);
             this.ribbon1.TabIndex = 1;
             this.ribbon1.Tabs.Add(this.ribTabCadastro);
             this.ribbon1.Tabs.Add(this.ribTabConsulta);
@@ -209,11 +216,6 @@ namespace teste
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "Cadastro";
             // 
-            // ribbonButton6
-            // 
-            this.ribbonButton6.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.Image")));
-            this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
-            // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,8 +231,6 @@ namespace teste
             this.ResumeLayout(false);
 
         }
-
-       
 
 
 

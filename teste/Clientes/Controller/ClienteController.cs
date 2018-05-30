@@ -82,27 +82,120 @@ namespace MiniPack.Clientes.control
                     while (Reader.Read())
                     {
                         p.Seq = Reader.GetInt16("seq");
-                        p.NomeRazao = Reader.GetString("nomerazao");
+                        if (Reader["nomerazao"] != DBNull.Value)
+                            p.NomeRazao = Reader.GetString("nomerazao");
                         p.Tipopessoa = Reader.GetString("tipopessoa");
-                        p.Cpf = Reader.GetString("cpf");
-                        p.Id = Reader.GetString("id");
-                        p.Senha = Reader.GetString("senha");
-                        p.Rg = Reader.GetString("rg");
-                        p.TelCelular = Reader.GetString("telcelular");
-                        p.TelFixo = Reader.GetString("telfixo");
-                        p.TelRecado = Reader.GetString("telrecado");
-                        p.DtaNasc = Reader.GetString("dtanasc");
-                        p.Sexo = Reader.GetString("sexo");
-                        p.EstadoCivil = Reader.GetString("estadocivil");
-                        p.Email = Reader.GetString("email");
-                        p.Cep = Reader.GetString("cep");
-                        p.Logradouro = Reader.GetString("logradouro");
-                        p.Nro = Reader.GetInt16("nro");
-                        p.Bairro = Reader.GetString("bairro");
-                        p.Complemento = Reader.GetString("complemento");
-                        p.Cidade = Reader.GetString("cidade");
-                        p.Uf = Reader.GetString("uf");
-                        p.Pais = Reader.GetString("pais");
+                        if (Reader["cpf"] != DBNull.Value)
+                            p.Cpf = Reader.GetString("cpf");
+                        if (Reader["id"] != DBNull.Value)
+                            p.Id = Reader.GetString("id");
+                        if (Reader["senha"] != DBNull.Value)
+                            p.Senha = Reader.GetString("senha");
+
+                        if (Reader["rg"] != DBNull.Value)
+                            p.Rg = Reader.GetString("rg");
+                        if (Reader["telcelular"] != DBNull.Value)
+                            p.TelCelular = Reader.GetString("telcelular");
+                        if (Reader["telfixo"] != DBNull.Value)
+                            p.TelFixo = Reader.GetString("telfixo");
+                        if (Reader["telrecado"] != DBNull.Value)
+                            p.TelRecado = Reader.GetString("telrecado");
+                        if (Reader["dtanasc"] != DBNull.Value)
+                            p.DtaNasc = Reader.GetString("dtanasc");
+                        if (Reader["sexo"] != DBNull.Value)
+                            p.Sexo = Reader.GetString("sexo");
+                        if (Reader["estadocivil"] != DBNull.Value)
+                            p.EstadoCivil = Reader.GetString("estadocivil");
+                        if (Reader["email"] != DBNull.Value)
+                            p.Email = Reader.GetString("email");
+                        if (Reader["cep"] != DBNull.Value)
+                            p.Cep = Reader.GetString("cep");
+                        if (Reader["logradouro"] != DBNull.Value)
+                            p.Logradouro = Reader.GetString("logradouro");
+                        if (Reader["nro"] != DBNull.Value)
+                            p.Nro = Reader.GetInt16("nro");
+                        if (Reader["bairro"] != DBNull.Value)
+                            p.Bairro = Reader.GetString("bairro");
+                        if (Reader["complemento"] != DBNull.Value)
+                            p.Complemento = Reader.GetString("complemento");
+                        if (Reader["cidade"] != DBNull.Value)
+                            p.Cidade = Reader.GetString("cidade");
+                        if (Reader["uf"] != DBNull.Value)
+                            p.Uf = Reader.GetString("uf");
+                        if (Reader["pais"] != DBNull.Value)
+                            p.Pais = Reader.GetString("pais");
+                    }
+                }
+                Reader.Close();
+                Banco.Close();
+                return p;
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Banco.Close();
+                return p;
+            }
+        }
+
+        public model.Cliente PesquisarCPF(string cpf)
+        {
+            string strSQL = "Select * From ge_cliente where cpf = " + cpf.Replace(".","").Replace("-","");
+            model.Cliente p = null;
+            try
+            {
+                Banco.Open();
+                MySqlCommand comando = new MySqlCommand(strSQL, Banco.connection);
+                MySqlDataReader Reader = comando.ExecuteReader();
+
+                if (Reader.HasRows)
+                {
+                    p = new model.Cliente();
+                    while (Reader.Read())
+                    {
+                        p.Seq = Reader.GetInt16("seq");
+                        if (Reader["nomerazao"] != DBNull.Value)
+                            p.NomeRazao = Reader.GetString("nomerazao");
+                        p.Tipopessoa = Reader.GetString("tipopessoa");
+                        if (Reader["cpf"] != DBNull.Value)
+                            p.Cpf = Reader.GetString("cpf");
+                        if (Reader["id"] != DBNull.Value)
+                            p.Id = Reader.GetString("id");
+                        if (Reader["senha"] != DBNull.Value)
+                            p.Senha = Reader.GetString("senha");
+
+                        if (Reader["rg"] != DBNull.Value)
+                            p.Rg = Reader.GetString("rg");
+                        if (Reader["telcelular"] != DBNull.Value)
+                            p.TelCelular = Reader.GetString("telcelular");
+                        if (Reader["telfixo"] != DBNull.Value)
+                            p.TelFixo = Reader.GetString("telfixo");
+                        if (Reader["telrecado"] != DBNull.Value)
+                            p.TelRecado = Reader.GetString("telrecado");
+                        if (Reader["dtanasc"] != DBNull.Value)
+                            p.DtaNasc = Reader.GetString("dtanasc");
+                        if (Reader["sexo"] != DBNull.Value)
+                            p.Sexo = Reader.GetString("sexo");
+                        if (Reader["estadocivil"] != DBNull.Value)
+                            p.EstadoCivil = Reader.GetString("estadocivil");
+                        if (Reader["email"] != DBNull.Value)
+                            p.Email = Reader.GetString("email");
+                        if (Reader["cep"] != DBNull.Value)
+                            p.Cep = Reader.GetString("cep");
+                        if (Reader["logradouro"] != DBNull.Value)
+                            p.Logradouro = Reader.GetString("logradouro");
+                        if (Reader["nro"] != DBNull.Value)
+                            p.Nro = Reader.GetInt16("nro");
+                        if (Reader["bairro"] != DBNull.Value)
+                            p.Bairro = Reader.GetString("bairro");
+                        if (Reader["complemento"] != DBNull.Value)
+                            p.Complemento = Reader.GetString("complemento");
+                        if (Reader["cidade"] != DBNull.Value)
+                            p.Cidade = Reader.GetString("cidade");
+                        if (Reader["uf"] != DBNull.Value)
+                            p.Uf = Reader.GetString("uf");
+                        if (Reader["pais"] != DBNull.Value)
+                            p.Pais = Reader.GetString("pais");
                     }
                 }
                 Reader.Close();
