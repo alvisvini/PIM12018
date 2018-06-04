@@ -25,3 +25,12 @@ C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Devart.Data.MySql.dll
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmCadastroCliente.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmConsultaProduto.resources
 C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\teste.frmCadastroProduto.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Categoria.View.Cadcategoria.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Venda.View.Venda.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Login.View.TelaLogin.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Promocao.View.Promocao.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Correios.Net.dll
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\Correios.Net.pdb
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Clientes.View.frmConsultaCliente.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\obj\Debug\MiniPack.Venda.View.frmConsultaVenda.resources
+C:\Users\Vinicius\Desktop\PIM12018\teste\bin\Debug\BuscaCEP.dll

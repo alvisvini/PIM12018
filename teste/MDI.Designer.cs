@@ -37,11 +37,15 @@ namespace teste
             this.btnCadProduto = new System.Windows.Forms.RibbonButton();
             this.btnCadCliente = new System.Windows.Forms.RibbonButton();
             this.btnCadCategoria = new System.Windows.Forms.RibbonButton();
+            this.btnCadmarca = new System.Windows.Forms.RibbonButton();
             this.ribTabConsulta = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.btnConsCliente = new System.Windows.Forms.RibbonButton();
             this.btnConsProduto = new System.Windows.Forms.RibbonButton();
             this.ribTabVenda = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
             this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.ribTabJanela = new System.Windows.Forms.RibbonTab();
@@ -50,7 +54,6 @@ namespace teste
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.btnCadmarca = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbonHost1
@@ -83,7 +86,7 @@ namespace teste
             // 
             this.btnCadCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCadCliente.Image")));
             this.btnCadCliente.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadCliente.SmallImage")));
-            this.btnCadCliente.Text = "Cliente";
+            this.btnCadCliente.Text = "Pessoas";
             this.btnCadCliente.Click += new System.EventHandler(this.btnCadCliente_Click);
             // 
             // btnCadCategoria
@@ -91,6 +94,13 @@ namespace teste
             this.btnCadCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCadCategoria.Image")));
             this.btnCadCategoria.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadCategoria.SmallImage")));
             this.btnCadCategoria.Text = "Categoria";
+            this.btnCadCategoria.Click += new System.EventHandler(this.btnCAdCategoria);
+            // 
+            // btnCadmarca
+            // 
+            this.btnCadmarca.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
+            this.btnCadmarca.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadmarca.SmallImage")));
+            this.btnCadmarca.Text = "Marca";
             // 
             // ribTabConsulta
             // 
@@ -108,6 +118,7 @@ namespace teste
             this.btnConsCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnConsCliente.Image")));
             this.btnConsCliente.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnConsCliente.SmallImage")));
             this.btnConsCliente.Text = "Cliente";
+            this.btnConsCliente.Click += new System.EventHandler(this.btnConsCliente_Click);
             // 
             // btnConsProduto
             // 
@@ -118,7 +129,28 @@ namespace teste
             // 
             // ribTabVenda
             // 
+            this.ribTabVenda.Panels.Add(this.ribbonPanel4);
             this.ribTabVenda.Text = "Venda";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.Items.Add(this.ribbonButton2);
+            this.ribbonPanel4.Items.Add(this.ribbonButton6);
+            this.ribbonPanel4.Text = null;
+            // 
+            // ribbonButton2
+            // 
+            this.ribbonButton2.Image = global::MiniPack.Properties.Resources.icons8_sale_24;
+            this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
+            this.ribbonButton2.Text = "Venda";
+            this.ribbonButton2.Click += new System.EventHandler(this.ribbonButton2_Click);
+            // 
+            // ribbonButton6
+            // 
+            this.ribbonButton6.Image = global::MiniPack.Properties.Resources.icons8_search_24;
+            this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
+            this.ribbonButton6.Text = "Consulta";
+            this.ribbonButton6.Click += new System.EventHandler(this.ribbonButton6_Click);
             // 
             // ribbonButton1
             // 
@@ -144,7 +176,7 @@ namespace teste
             this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2013;
             this.ribbon1.OrbVisible = false;
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(720, 95);
+            this.ribbon1.Size = new System.Drawing.Size(720, 97);
             this.ribbon1.TabIndex = 1;
             this.ribbon1.Tabs.Add(this.ribTabCadastro);
             this.ribbon1.Tabs.Add(this.ribTabConsulta);
@@ -183,12 +215,6 @@ namespace teste
             this.ribbonButton5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.Image")));
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "Cadastro";
-            // 
-            // btnCadmarca
-            // 
-            this.btnCadmarca.Image = global::MiniPack.Properties.Resources.icons8_mais_24;
-            this.btnCadmarca.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCadmarca.SmallImage")));
-            this.btnCadmarca.Text = "Marca";
             // 
             // MDI
             // 
@@ -230,5 +256,8 @@ namespace teste
         private System.Windows.Forms.RibbonButton btnConsCliente;
         public System.Windows.Forms.RibbonButton btnConsProduto;
         private System.Windows.Forms.RibbonButton btnCadmarca;
+        private System.Windows.Forms.RibbonPanel ribbonPanel4;
+        private System.Windows.Forms.RibbonButton ribbonButton2;
+        private System.Windows.Forms.RibbonButton ribbonButton6;
     }
 }

@@ -7,7 +7,12 @@
         private string marca;
         private int seqcategoria;
         private string obs;
-        private int preco;
+        private decimal preco;
+        private int tamanho;
+        private string imagem;
+        private int quantidade;
+        private string cod;
+      
 
         public Produto() { }
 
@@ -16,7 +21,11 @@
         public string Marca { get => marca; set => marca = value; }
         public int Seqcategoria { get => seqcategoria; set => seqcategoria = value; }
         public string Obs { get => obs; set => obs = value; }
-        public int Preco { get => preco; set => preco = value; }
+        public decimal Preco { get => preco; set => preco = value; }
+        public int Tamanho { get => tamanho; set => tamanho = value; }
+        public string Imagem { get => imagem; set => imagem = value; }
+        public int Quantidade { get => quantidade; set => quantidade = value; }
+        public string Cod { get => cod; set => cod = value; }
     }
 }
 
